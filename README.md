@@ -5,6 +5,7 @@ minor theme modifications for using [fasto](https://wordpress.org/support/theme/
 ## Installation
 
 - create a zip archive of the directory `fasto-child`
+  (or download from GitHub)
 - open WordPress administration (usually `/wp-admin`)
 - open themes page
 - add theme by uploading zip file
