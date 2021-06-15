@@ -4,9 +4,9 @@ minor theme modifications for using [fasto](https://wordpress.org/support/theme/
 
 ## Modifications
 
-- text 404 without "oh boy"
-- instant focus in search input
-- footer "made by" => "theme made by"
+- [ ] text 404 without "oh boy"
+- [ ] instant focus in search input
+- [ ] footer "made by" => "theme made by"
 
 ## Installation
 
