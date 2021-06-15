@@ -29,7 +29,7 @@ services:
       WORDPRESS_DB_NAME: wordpress_db
     volumes:
       - wp_data:/var/www/html
-      - "./themes:/var/www/html/themes"
+      - "./themes:/var/www/html/wp-content/themes"
 
   wordpress-cli:
     container_name: 'local-wp-cli'
@@ -47,7 +47,9 @@ services:
     command: >
       /bin/sh -c '
       sleep 10;
-      wp core install --path="/var/www/html" --url="http://localhost:8000" --title="Local Wordpress By Docker" --admin_user=admin --admin_password=secret --admin_email=foo@bar.com
+      wp core install --path="/var/www/html" --url="http://localhost:8000" --title="Local Wordpress By Docker" --admin_user=admin --admin_password=secret --admin_email=test@example.com;
+      wp theme install --activate twentytwentyone;
+      wp theme install --activate fasto;
       '
     environment:
       WORDPRESS_DB_HOST: 'db:3306'

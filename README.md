@@ -19,6 +19,48 @@ minor theme modifications for using [fasto](https://wordpress.org/support/theme/
 
 ## Development
 
+```
+docker-compose up
+```
+
+Wait until WordPress and themes have been installed, then you should see something like
+
+> local-wp-cli     | Success: Installed 1 of 1 themes.
+> local-wp-cli exited with code 0
+
+
+Open `wp-admin` in your browser:
+
+http://localhost:8000/wp-admin
+
+Log in with user `admin` and password `secret`.
+
+Go to Appearance -> Themes.
+
+### Optional manual setup
+
+- Install WordPress
+
+```
+  wp core install 
+    --path="/var/www/html" 
+    --url="http://localhost:8000" 
+    --title="Local Wordpress By Docker" 
+    --admin_user=admin 
+    --admin_password=secret 
+    --admin_email=test@example.com;
+```
+
+- Install themes
+
+either use the CLI
+
+```
+  wp theme install --activate fasto;
+```
+
+or
+
 - checkout the original [fasto theme](https://wordpress.org/support/theme/fasto/) as parent theme into `/themes/fasto`
   (download from WordPress plugin page or, with `subversion` installed: 
   
@@ -27,12 +69,10 @@ cd wordpress/themes
 svn co https://themes.svn.wordpress.org/fasto/1.5.6/ fasto
 ```
 
-- mount the themes folder into a local WordPress docker container, or
-  run
+- mount the themes folder into a local WordPress docker container
+
   
-```
-docker-compose up
-```
+
 
 ### Optional: Install WordPress Plugins
 
