@@ -37,25 +37,39 @@ services:
       - db
       - wordpress
     image: wordpress:cli
-    # Run wordpress-cli with the same user-id as wordpress.
-    # This way there are no permission problems
-    # when running the cli
-    user: xfs
-    # The sleep 10 is required so that the command is run after
-    # mysql is initialized. Depending on your machine this might take
-    # longer or it can go faster.
-    command: >
-      /bin/sh -c '
-      sleep 10;
-      wp core install --path="/var/www/html" --url="http://localhost:8000" --title="Local Wordpress By Docker" --admin_user=admin --admin_password=secret --admin_email=test@example.com;
-      wp theme install --activate twentytwentyone;
-      wp theme install --activate fasto;
-      '
+    # Run wordpress-cli with the same user-id as wordpress
+    # to avoid general permission problems:
+    user: "33:33"
     environment:
       WORDPRESS_DB_HOST: 'db:3306'
       WORDPRESS_DB_USER: wordpress_user
       WORDPRESS_DB_PASSWORD: wordpress_password
       WORDPRESS_DB_NAME: wordpress_db
+      # fix default cache dir went to inaccessible directory:
+      WP_CLI_CACHE_DIR: '/var/www/html/.wp-cli/cache'
+    # Some "sleep" (waiting) is required so that the command is run after
+    # mysql is initialized. Depending on your machine this might take
+    # longer, then the sleep time has to be raised for it to work.
+    command: >
+      /bin/sh -c '
+      sleep 10;
+      wp core install --path="/var/www/html" --url="http://localhost:8000" --title="Local Wordpress By Docker" --admin_user=admin --admin_password=secret --admin_email=test@example.com;
+      echo "--- check directories and permissions...";
+      stat /var/www/html/wp-content/themes;
+      ls /var/www/html/wp-content/themes;
+      echo "--- install twentytwentyone...";
+      wp theme install --activate twentytwentyone;
+      stat /var/www/html/wp-content/themes;
+      ls /var/www/html/wp-content/themes;
+      stat /var/www/html/wp-content/themes/twentytwentyone;
+      ls /var/www/html/wp-content/themes/twentytwentyone;
+      echo "--- install fasto...";
+      wp theme install --activate fasto;
+      stat /var/www/html/wp-content/themes;
+      ls /var/www/html/wp-content/themes;
+      stat /var/www/html/wp-content/themes/fasto;
+      ls /var/www/html/wp-content/themes/fasto;
+      '
     volumes:
       - wp_data:/var/www/html
 

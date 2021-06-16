@@ -6,3 +6,5 @@ themes/twentytwentyone/
 
 data
 wordpress
+.wp-cli
+!.wp-cli/cache
