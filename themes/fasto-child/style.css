@@ -1,8 +1,8 @@
 /*
  Theme Name:   Fasto Child
  Theme URI:    https://github.com/openmindculture/wp-fasto-child-theme/i
- Description:  Twenty Fifteen Child Theme
- Author:       John Doe
+ Description:  Fasto Child Theme
+ Author:       Ingo Steinke
  Author URI:   https://www.ingo-steinke.com/
  Template:     fasto
  Version:      1.0.0
@@ -11,3 +11,40 @@
  Tags:         Tags: 404, inclusive, footer, search, ux, usability
  Text Domain:  fastochild
 */
+
+/* fix distorted image size in default gallery detail view */
+img {
+    max-width: 100%;
+    height: auto
+}
+
+/* hide redundant poster image */
+.single .article-single .post-thumb {
+    display: none;
+}
+
+footer .widget p,
+footer .widget p a {
+    font-size: 16px;
+    line-height: 1.5;
+    color: white;
+}
+footer .widget p a:link,
+footer .widget p a:visited {
+    text-decoration: underline;
+}
+/* harmonize column heights */
+.post-thumb .cover-image {
+    object-fit: cover;
+    aspect-ratio: 16/9;
+}
+/* 2-column footer */
+@media (min-width: 1024px) {
+    #footer-widgets .col-desktop-4:nth-child(2) {
+        flex: 0 0 65%;
+        max-width: 65% !important;
+    }
+        #footer-widgets .col-desktop-4:nth-child(3) {
+        display:none;
+    }
+}

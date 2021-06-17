@@ -89,6 +89,10 @@ cd /var/www/html/
 ./wp-cli.phar plugin install wordpress-seo # Yoast SEO
 ```
 
+### Copy Content
+
+Create or copy relevant content e.g.footer widgets, more articles etc.
+
 ### Child Theme Development Resources
 
 [developer.wordpress.org/themes/advanced-topics/child-themes/](https://developer.wordpress.org/themes/advanced-topics/child-themes/)
