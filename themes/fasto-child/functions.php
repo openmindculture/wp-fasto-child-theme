@@ -24,5 +24,5 @@
     }
 
     add_action( 'wp_loaded', 'child_remove_parent_function' );
-    add_action( 'wp_footer', 'modified_fasto_developer_credit' );
+    add_action( 'wp_footer', 'modified_fasto_developer_credit', 200 );
     

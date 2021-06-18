@@ -29,15 +29,18 @@ footer .widget p a {
     line-height: 1.5;
     color: white;
 }
+
 footer .widget p a:link,
 footer .widget p a:visited {
     text-decoration: underline;
 }
+
 /* harmonize column heights */
 .post-thumb .cover-image {
     object-fit: cover;
     aspect-ratio: 16/9;
 }
+
 /* 2-column footer */
 @media (min-width: 1024px) {
     #footer-widgets .col-desktop-4:nth-child(2) {
@@ -47,4 +50,8 @@ footer .widget p a:visited {
         #footer-widgets .col-desktop-4:nth-child(3) {
         display:none;
     }
+}
+
+.copyright-user a, .copyright-fasto a {
+    color: #114791;
 }
