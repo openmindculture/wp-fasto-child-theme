@@ -1,5 +1,10 @@
 # Changelog
 
+## modify text
+
+make footer credits more clear that the theme, not the content is by wowlayers,
+replace the silly "oh boy" caption on the 404 not found site by simply saying "sorry"
+
 ## search autofocus
 
 why does the search input field not get focus when clicking on the

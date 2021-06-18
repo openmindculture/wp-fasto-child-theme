@@ -13,3 +13,16 @@
     }
 
     add_action( 'wp_enqueue_scripts', 'child_theme_scripts' );
+
+    function modified_fasto_developer_credit(){
+        $url = 'https://wowlayers.com/';
+        echo '<div class="copyright-fasto">'.esc_html__( 'WordPress theme: fasto by ','fasto' ).'<a href="'. $url .'" target="_blank">'.esc_html__( 'WOWLayers.com','fasto' ).'</a></div>';
+    }
+
+    function child_remove_parent_function() {
+        remove_action( 'wp_footer', 'fasto_developer_credit' );
+    }
+
+    add_action( 'wp_loaded', 'child_remove_parent_function' );
+    add_action( 'wp_footer', 'modified_fasto_developer_credit' );
+    
