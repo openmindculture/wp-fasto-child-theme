@@ -5,7 +5,7 @@
  Author:       Ingo Steinke
  Author URI:   https://www.ingo-steinke.com/
  Template:     fasto
- Version:      1.1.0
+ Version:      1.1.1
  License:      GNU General Public License v2 or later
  License URI:  http://www.gnu.org/licenses/gpl-2.0.html
  Tags:         Tags: 404, inclusive, footer, search, ux, usability
@@ -48,7 +48,7 @@ footer .widget p a:visited {
         max-width: 65% !important;
     }
         #footer-widgets .col-desktop-4:nth-child(3) {
-        display:none;
+    	display:none;
     }
 }
 
@@ -59,29 +59,38 @@ footer .widget p a:visited {
 /* mobile more calm and compact */
 
 @media (max-width: 767px) {
-    .site-grid {
-      margin-top: 0;
-    }
-    header#theme-header {
-      width: 100vw;
-      max-width: 100%;
-      display: grid;
-      grid-template-columns: 1fr 2fr 1fr;
-    }
-    header#theme-header nav {
-      grid-column: 1;
-      grid-row: 1;
-    }
-    header#theme-header .logo {
-      flex-direction: column;
-      grid-column: 2;
-      grid-row: 1;
-    }
-    header#theme-header .search-mobile {
-      grid-column: 3;
-      grid-row: 1;
-    }
-    header#theme-header .site-title {
-      text-align: center;
-    }
-  }
+	.site-grid {
+		margin-top: 0;
+	}
+	header#theme-header {
+		width: 100vw;
+		max-width: 100%;
+		display: grid;
+		grid-template-columns: 1fr 1fr 1fr;
+		padding-left: 0;
+		padding-right: 0;
+	}
+	header#theme-header nav {
+		grid-column: 1;
+		grid-row: 1;
+	}
+	header#theme-header .logo {
+		flex-direction: column;
+		justify-content: center;
+		grid-column: 2;
+		grid-row: 1;
+	}
+	header#theme-header .search-mobile {
+		grid-column: 3;
+		grid-row: 1;
+	}
+	header#theme-header .site-title {
+		text-align: center;
+		font-size: 1rem;
+	}
+	header#theme-header p {
+		text-align: center;
+		font-size: .75rem;
+		line-height: 1;
+	}
+}
