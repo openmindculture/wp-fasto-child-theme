@@ -19,3 +19,9 @@ I previously customized some details about poster images,
 and custom footer styles to omit the third column
 and span the second one over two thirds instead,
 plus some font and color adjustment for custom html on dark background.
+
+## mobile header more calm and compact
+
+Put header inside a compact grid all in one row.
+TODO depending on the site title length, we might need a smaller font.
+No unnecessary margin on top.
