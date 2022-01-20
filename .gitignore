@@ -8,3 +8,4 @@ data
 wordpress
 .wp-cli
 !.wp-cli/cache
+.idea
