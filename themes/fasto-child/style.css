@@ -5,12 +5,18 @@
  Author:       Ingo Steinke
  Author URI:   https://www.ingo-steinke.com/
  Template:     fasto
- Version:      1.1.2
+ Version:      1.2.0
  License:      GNU General Public License v2 or later
  License URI:  http://www.gnu.org/licenses/gpl-2.0.html
- Tags:         Tags: 404, inclusive, footer, search, ux, usability
+ Tags:         Tags: 404, inclusive, footer, search, ux, usability, accessibility
  Text Domain:  fastochild
 */
+
+/* raise body font color contrast */
+
+body  {
+	color: #383d4f;
+}
 
 /* fix distorted image size in default gallery detail view */
 img {

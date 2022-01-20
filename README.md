@@ -10,6 +10,7 @@ minor theme modifications for using [fasto](https://wordpress.org/support/theme/
 - [x] footer only 2 columns
 - [x] modified poster image style
 - [x] mobile header more calm and compact
+- [x] accessibility: darker default font for better readability
 
 ## Installation
 

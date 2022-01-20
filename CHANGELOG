@@ -1,5 +1,9 @@
 # Changelog
 
+## raise body font color contrast
+
+set to body color: #383d4f for better readability
+
 ## modify text
 
 make footer credits more clear that the theme, not the content is by wowlayers,
