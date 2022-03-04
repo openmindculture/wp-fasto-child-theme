@@ -1,30 +1,34 @@
 # Changelog
 
-## raise body font color contrast
+## 1.2.0 (2022-01-20)
+
+### raise body font color contrast
 
 set to body color: #383d4f for better readability
 
-## modify text
+## earlier versions
+
+### modify text
 
 make footer credits more clear that the theme, not the content is by wowlayers,
 replace the silly "oh boy" caption on the 404 not found site by simply saying "sorry"
 
-## search autofocus
+### search autofocus
 
 why does the search input field not get focus when clicking on the
 magnifying glass icon? Should we just add autofocus to the webform?
 Maybe not, probably it's the default form field which is always there
-but intially hidden, so we have to focus explicitly when the search
+but initially hidden, so we have to focus explicitly when the search
 trigger is called (not a button but magnifyer icon `.search-trigger`)
 
-## add customizer styles
+### add customizer styles
 
 I previously customized some details about poster images,
 and custom footer styles to omit the third column
 and span the second one over two thirds instead,
 plus some font and color adjustment for custom html on dark background.
 
-## mobile header more calm and compact
+### mobile header more calm and compact
 
 Put header inside a compact grid all in one row.
 TODO depending on the site title length, we might need a smaller font.
