@@ -10,6 +10,8 @@ These fonts are **not** covered by wp-fasto's GPL license!
 * new header font: [Healthy Freak](https://www.myfonts.com/fonts/vozzy/healthy-freak/) by [Oleg Voznyy](https://www.myfonts.com/foundry/vozzy/)
 * new body font: [Liebe Ruth](https://liebefonts.com/fonts/lieberuth) by [Ulrike Rausch](https://liebefonts.com/about)
 
+(TODO fix wp_dequeue_style and remove action unloading obsolete web fonts from google)
+
 ### future CSS changes
 
 try and use new and experimental CSS features as progressive enhancement

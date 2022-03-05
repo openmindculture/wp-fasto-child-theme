@@ -21,6 +21,8 @@
 
     function child_remove_parent_function() {
         remove_action( 'wp_footer', 'fasto_developer_credit' );
+		remove_action( 'wp_enqueue_scripts','fasto_add_fonts_css' );
+		wp_dequeue_style( 'fasto-custom-css' );
     }
 
     add_action( 'wp_loaded', 'child_remove_parent_function' );

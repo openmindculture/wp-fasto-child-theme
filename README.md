@@ -17,6 +17,7 @@ minor theme modifications for using [fasto](https://wordpress.org/support/theme/
 ### optional web fonts (non-free)
 
 - [x] optional MyFontsWebfontsKit **NOT free to use**!
+- [ ] (TODO fix `wp_dequeue_style` and remove action unloading obsolete web fonts from google; workaround: deactivate enqueuing in parent theme)
 
 The optional web fonts, [Healthy Freak](https://www.myfonts.com/fonts/vozzy/healthy-freak/) by [Oleg Voznyy](https://www.myfonts.com/foundry/vozzy/), and  [Liebe Ruth](https://liebefonts.com/fonts/lieberuth) by [Ulrike Rausch](https://liebefonts.com/about) have been purchased by Ingo Steinke via [MyFonts.com](https://www.myfonts.com/) (Order # M12889860, Webfont Build ID 4424710).
 
