@@ -16,9 +16,9 @@ minor theme modifications for using [fasto](https://wordpress.org/support/theme/
 
 ### optional web fonts (non-free)
 
-- [ ] optional MyFontsWebfontsKit **NOT** free to use!
+- [x] optional MyFontsWebfontsKit **NOT free to use**!
 
-The optional web fonts, [Healthy Freak](https://www.myfonts.com/fonts/vozzy/healthy-freak/) by [Oleg Voznyy](https://www.myfonts.com/foundry/vozzy/), and  [Liebe Ruth](https://liebefonts.com/fonts/lieberuth) by [Ulrike Rausch](https://liebefonts.com/about) have been purchased by Ingo Steinke.
+The optional web fonts, [Healthy Freak](https://www.myfonts.com/fonts/vozzy/healthy-freak/) by [Oleg Voznyy](https://www.myfonts.com/foundry/vozzy/), and  [Liebe Ruth](https://liebefonts.com/fonts/lieberuth) by [Ulrike Rausch](https://liebefonts.com/about) have been purchased by Ingo Steinke via [MyFonts.com](https://www.myfonts.com/) (Order # M12889860, Webfont Build ID 4424710).
 
 While wp-fasto-child-theme is distributed under the GPL license,the optional MyFontsWebfontsKit is **not** covered by the GPL and may **not** be used on other websites without a valid license.
 

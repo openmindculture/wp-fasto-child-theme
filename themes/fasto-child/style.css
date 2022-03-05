@@ -5,17 +5,69 @@
  Author:       Ingo Steinke
  Author URI:   https://www.ingo-steinke.com/
  Template:     fasto
- Version:      1.3.0
+ Version:      1.3.1
  License:      GNU General Public License v2 or later (except for optional non-free web fonts)
  License URI:  http://www.gnu.org/licenses/gpl-2.0.html
  Tags:         Tags: 404, inclusive, footer, search, ux, usability, accessibility
  Text Domain:  fastochild
 */
 
+/**
+ * @license
+ * MyFonts Webfont Build ID 4424710, 2022-03-05T04:06:47-0500
+ *
+ * The fonts listed in this notice are subject to the End User License
+ * Agreement(s) entered into by the website owner. All other parties are
+ * explicitly restricted from using the Licensed Webfonts(s).
+ *
+ * You may obtain a valid license at the URLs below.
+ *
+ * Webfont: LiebeRuth-Regular by LiebeFonts
+ * URL: https://www.myfonts.com/fonts/liebe-fonts/liebe-ruth/regular/
+ * Copyright: Copyright © 2013 by Ulrike Wilhelm. All rights reserved.
+ *
+ * Webfont: HealthyFreakRegular by Vozzy
+ * URL: https://www.myfonts.com/fonts/vozzy/healthy-freak/regular/
+ *
+ *
+ *
+ * © 2022 MyFonts Inc
+*/
+
+/* @import must be at top of file, otherwise CSS will not work */
+@import url("//hello.myfonts.net/count/438406");
+
+@font-face {
+	font-family: "HealthyFreakRegular";
+	src: url('webFonts/HealthyFreakRegular/font.woff2') format('woff2'), url('webFonts/HealthyFreakRegular/font.woff') format('woff');
+}
+@font-face {
+	font-family: "LiebeRuth-Regular";
+	src: url('webFonts/LiebeRuthRegular/font.woff2') format('woff2'), url('webFonts/LiebeRuthRegular/font.woff') format('woff');
+}
+
+/* wp-fasto-child-theme 1.3.0 : other modifications */
+
 /* raise body font color contrast */
 
 body  {
 	color: #383d4f;
+	font-family: LiebeRuth-Regular, Montserrat, Arial, sans-serif;
+	font-size: 16px;
+	font-weight: normal;
+	line-height: 32px;
+}
+
+header#theme-header h1.site-title, h1,
+body h2, body h2.post-title, body h3, body h4, body h5, body h6 {
+	font-family: HealthyFreakRegular, Montserrat, Arial, sans-serif;
+	font-weight: normal;
+	letter-spacing: normal;
+	text-transform: none;
+}
+
+header#theme-header h1.site-title, h1 {
+	font-size: 42px;
 }
 
 /* fix distorted image size in default gallery detail view */
