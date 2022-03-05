@@ -1,5 +1,19 @@
 # Changelog
 
+## 1.3.0-plus-non-free (2022-03-05)
+
+### typography
+
+Optional new web fonts are purchased by and licensed to Ingo Steinke.
+These fonts are **not** covered by wp-fasto's GPL license!
+
+* new header font: [Healthy Freak](https://www.myfonts.com/fonts/vozzy/healthy-freak/) by [Oleg Voznyy](https://www.myfonts.com/foundry/vozzy/)
+* new body font: [Liebe Ruth](https://liebefonts.com/fonts/lieberuth) by [Ulrike Rausch](https://liebefonts.com/about)
+
+### future CSS changes
+
+try and use new and experimental CSS features as progressive enhancement
+
 ## 1.2.0 (2022-01-20)
 
 ### raise body font color contrast

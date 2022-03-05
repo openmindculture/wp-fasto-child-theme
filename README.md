@@ -11,8 +11,18 @@ minor theme modifications for using [fasto](https://wordpress.org/support/theme/
 - [x] modified poster image style
 - [x] mobile header more calm and compact
 - [x] accessibility: darker default font for better readability
+- [x] modified category colors
+- [x] new and experimental CSS features as progressive enhancement
 
-## Installation
+### optional web fonts (non-free)
+
+- [ ] optional MyFontsWebfontsKit **NOT** free to use!
+
+The optional web fonts, [Healthy Freak](https://www.myfonts.com/fonts/vozzy/healthy-freak/) by [Oleg Voznyy](https://www.myfonts.com/foundry/vozzy/), and  [Liebe Ruth](https://liebefonts.com/fonts/lieberuth) by [Ulrike Rausch](https://liebefonts.com/about) have been purchased by Ingo Steinke.
+
+While wp-fasto-child-theme is distributed under the GPL license,the optional MyFontsWebfontsKit is **not** covered by the GPL and may **not** be used on other websites without a valid license.
+
+## Installation 
 
 - create or [download a zip archive](https://github.com/openmindculture/wp-fasto-child-theme/releases/download/1.0.0/fasto-child-1.0.0.zip) of the directory `fasto-child`
 - open WordPress administration (usually `/wp-admin`)

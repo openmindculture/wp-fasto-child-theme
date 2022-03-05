@@ -1,12 +1,12 @@
 /*
  Theme Name:   Fasto Child
- Theme URI:    https://github.com/openmindculture/wp-fasto-child-theme/i
- Description:  Fasto Child Theme
+ Theme URI:    https://github.com/openmindculture/wp-fasto-child-theme/
+ Description:  Fasto Child Theme for Open-Mind-Culture.org weblog
  Author:       Ingo Steinke
  Author URI:   https://www.ingo-steinke.com/
  Template:     fasto
- Version:      1.2.0
- License:      GNU General Public License v2 or later
+ Version:      1.3.0
+ License:      GNU General Public License v2 or later (except for optional non-free web fonts)
  License URI:  http://www.gnu.org/licenses/gpl-2.0.html
  Tags:         Tags: 404, inclusive, footer, search, ux, usability, accessibility
  Text Domain:  fastochild
@@ -58,8 +58,13 @@ footer .widget p a:visited {
     }
 }
 
+a, .color-1, .widget .color-1, .widget a:hover, .sub-menu .current-menu-item > a, .sub-menu a:hover, .menu > .menu-item > a:hover, .menu .page_item:hover > a, .menu > .menu-item:hover > a, .menu > .current-menu-item > a, .menu > .current-menu-ancestor > a, ul.tags a:hover, .comment-date, .fasto-fallback-menu .current_page_item a, .widget th a, .widget td a,
 .copyright-user a, .copyright-fasto a {
     color: #114791;
+}
+
+.category-link {
+	background-color: #96511c;
 }
 
 /* mobile more calm and compact */
@@ -98,5 +103,18 @@ footer .widget p a:visited {
 		text-align: center;
 		font-size: .75rem;
 		line-height: 1;
+	}
+}
+
+/* experimental / new CSS features */
+
+.article:has(img.cover-image.lazyload) {
+	aspect-ratio: 600 / 800;
+	max-width: 100vw;
+}
+
+@container (max-width: 700px) {
+	.article, .article img.cover-image {
+		max-width: 100%;
 	}
 }
