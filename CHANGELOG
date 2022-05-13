@@ -1,5 +1,9 @@
 # Changelog
 
+## 1.4.0-plus-non-free: add dual license (2022-05-13)
+
+* explicitly state that the fonts are excempt from the GPL license
+
 ## 1.3.4-plus-non-free (2022-05-05)
 
 * replace American with British flag in language selector
