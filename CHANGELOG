@@ -1,5 +1,10 @@
 # Changelog
 
+## 1.5.0-plus-non-free:
+
+* prevent storing unhelpfully long history of post revisions
+* utility classes to control responsive image layout
+
 ## 1.4.0-plus-non-free: add dual license (2022-05-13)
 
 * explicitly state that the fonts are excempt from the GPL license
