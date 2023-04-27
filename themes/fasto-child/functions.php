@@ -37,3 +37,5 @@
 		remove_theme_support( 'widgets-block-editor' );
 	}
 	add_action( 'after_setup_theme', 'example_theme_support' );
+
+define( 'WP_POST_REVISIONS', 2 ); // restrict the number of stored revisions per post
