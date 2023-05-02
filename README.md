@@ -2,6 +2,8 @@
 
 minor theme modifications for using [fasto](https://wordpress.org/support/theme/fasto/) on [open-mind-culture.org](https://www.open-mind-culture.org/)
 
+![screenshot](themes/fasto-child/screenshot.png)
+
 ## Modifications
 
 - [x] text 404 without "oh boy"
@@ -12,7 +14,9 @@ minor theme modifications for using [fasto](https://wordpress.org/support/theme/
 - [x] mobile header more calm and compact
 - [x] accessibility: darker default font for better readability
 - [x] modified category colors
+- [x] new web fonts
 - [x] new and experimental CSS features as progressive enhancement
+- [x] utility classes for custom layout
 
 ### optional web fonts (non-free)
 
