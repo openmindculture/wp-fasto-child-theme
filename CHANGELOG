@@ -1,9 +1,9 @@
 # Changelog
 
-## 1.5.0-plus-non-free:
+## 1.5.0-plus-non-free: utility classes (2023-04-28)
 
-* prevent storing unhelpfully long history of post revisions
 * utility classes to control responsive image layout
+* prevent storing unhelpfully long history of post revisions
 
 ## 1.4.0-plus-non-free: add dual license (2022-05-13)
 
