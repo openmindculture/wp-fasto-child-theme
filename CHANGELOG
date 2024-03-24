@@ -1,5 +1,14 @@
 # Changelog
 
+## 1.6.1-plus-non-free: increase mobile readability (2024-03-24)
+
+* decrease mobile heading size to improve readability
+* decrease margins above article content
+* increase breadcrumb font size
+* hide redundant breadcrumb part above post title
+
+* update screenshot
+
 ## 1.5.1-plus-non-free: update screenshot (2023-05-02)
 
 * update screenshot
