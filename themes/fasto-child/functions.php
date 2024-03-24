@@ -16,7 +16,7 @@
 
     function modified_fasto_developer_credit(){
         $url = 'https://wowlayers.com/';
-        echo '<div class="copyright-fasto">'.esc_html__( 'WordPress theme: fasto by ','fasto' ).'<a href="'. $url .'" target="_blank">'.esc_html__( 'WOWLayers.com','fasto' ).'</a></div>';
+        echo '<div class="copyright-fasto">'.esc_html__( 'WordPress theme based on fasto by ','fasto' ).'<a href="'. $url .'" target="_blank">'.esc_html__( 'WOWLayers.com','fasto' ).'</a></div>';
     }
 
     function child_remove_parent_function() {
