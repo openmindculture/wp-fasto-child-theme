@@ -5,7 +5,7 @@
  Author:       Ingo Steinke
  Author URI:   https://www.ingo-steinke.com/
  Template:     fasto
- Version:      1.6.0
+ Version:      1.6.2
  License:      GNU General Public License v2 or later (except for optional non-free web fonts)
  License URI:  http://www.gnu.org/licenses/gpl-2.0.html
  Tags:         Tags: 404, inclusive, footer, search, ux, usability, accessibility
@@ -146,11 +146,34 @@ a, .color-1, .widget .color-1, .widget a:hover, .sub-menu .current-menu-item > a
 	.site-grid {
 		margin-top: 0;
 	}
+	.logo.logo {
+		max-width: unset !important; /* override parent theme or wp core default style */
+	}
+	.logo .site-description {
+		display: none;
+	}
+	.post-content {
+		font-size: 18px
+	}
+	ul.nav-menu li.lang-item {
+		padding-top: 1rem;
+	}
+	ul.nav-menu li.lang-item a {
+		font-size: 22px;
+	}
+	ul.nav-menu li.lang-item a img {
+		width: 20%;
+		height: 100%;
+	}
+	#searchform input {
+		font-size: 20px;
+	}
 	header#theme-header {
 		width: 100vw;
 		max-width: 100%;
 		display: grid;
-		grid-template-columns: 1fr 1fr 1fr;
+		grid-gap: 0;
+		grid-template-columns: auto 1fr auto;
 		padding-left: 0;
 		padding-right: 0;
 	}
@@ -173,11 +196,11 @@ a, .color-1, .widget .color-1, .widget a:hover, .sub-menu .current-menu-item > a
 		font-size: 1rem;
 	}
 	header#theme-header h1.site-title, h1 {
-		font-size: 36px;
+		font-size: 34px;
 		line-height: 1.25;
-		margin-bottom: 1.25rem;
+		margin: 0;
 	}
-	h1 + author-date {
+	h1 + .author-date {
 		padding-bottom: 0;
 	}
 	header#theme-header p {
@@ -187,6 +210,9 @@ a, .color-1, .widget .color-1, .widget a:hover, .sub-menu .current-menu-item > a
 	}
 	.separator.single {
 		margin: 0.5rem 0 0.5rem 0;
+	}
+	.breadcrumb-navigation {
+		margin-bottom: 0;
 	}
 	.single ul.breadcrumb {
 		font-size: 16px;

@@ -1,5 +1,10 @@
 # Changelog
 
+## 1.6.2-plus-non-free: improve mobile layout (2024-03-26)
+
+* adjust font sizes, margins, and grid cells
+* hide redundant site subheadline
+
 ## 1.6.1-plus-non-free: increase mobile readability (2024-03-24)
 
 * decrease mobile heading size to improve readability
