@@ -1,5 +1,9 @@
 # Changelog
 
+## 1.6.3-plus-non-free: improve mobile layout (2024-03-26)
+
+* fix the mobile menu fix on Safari/GnomeWeb
+
 ## 1.6.2-plus-non-free: improve mobile layout (2024-03-26)
 
 * adjust font sizes, margins, and grid cells

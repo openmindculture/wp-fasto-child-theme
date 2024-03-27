@@ -5,7 +5,7 @@
  Author:       Ingo Steinke
  Author URI:   https://www.ingo-steinke.com/
  Template:     fasto
- Version:      1.6.2
+ Version:      1.6.3
  License:      GNU General Public License v2 or later (except for optional non-free web fonts)
  License URI:  http://www.gnu.org/licenses/gpl-2.0.html
  Tags:         Tags: 404, inclusive, footer, search, ux, usability, accessibility
@@ -140,6 +140,19 @@ a, .color-1, .widget .color-1, .widget a:hover, .sub-menu .current-menu-item > a
 	white-space: nowrap;
 }
 
+#search-form-holder { /* workaround cross-browser inconsistencies */
+	max-height: 63px;
+	overflow-y: hidden;
+	border-radius: 5px;
+}
+
+#searchform input[type="text"] {
+	line-height: normal; /* apply Firefox/Safari to all browsers */
+	margin-bottom: 0;
+	padding-top: 15px;
+	padding-bottom: 15px;
+}
+
 /* mobile more calm and compact */
 
 @media (max-width: 767px) {
@@ -165,8 +178,15 @@ a, .color-1, .widget .color-1, .widget a:hover, .sub-menu .current-menu-item > a
 		width: 20%;
 		height: 100%;
 	}
-	#searchform input {
+	#searchform,
+	#searchform input,
+	#searchform input::-webkit-input-placeholder,
+	#searchform input::-moz-placeholder {
 		font-size: 20px;
+	}
+	#searchform input[type="text"] {
+		padding-top: 14px;
+		padding-bottom: 14px;
 	}
 	header#theme-header {
 		width: 100vw;
