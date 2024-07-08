@@ -1,5 +1,9 @@
 # Changelog
 
+## 1.7.0-plus-non-free: improve performance (2024-07-08)
+
+* disable Heartbeat except when editing to improve performance
+
 ## 1.6.3-plus-non-free: improve mobile layout (2024-03-26)
 
 * fix the mobile menu fix on Safari/GnomeWeb

@@ -38,4 +38,12 @@
 	}
 	add_action( 'after_setup_theme', 'example_theme_support' );
 
-define( 'WP_POST_REVISIONS', 2 ); // restrict the number of stored revisions per post
+define( 'WP_POST_REVISIONS', 2 ); // restrict the number of stored revisions per post to improve performance
+
+// disable WP Heartbeat API, except for editor views where we need it to trigger auto-saving
+global $pagenow;
+if (!is_admin() || $pagenow != 'post.php') {
+	add_action( 'init', function(){
+		wp_deregister_script('heartbeat');
+	}, 1 );
+}
