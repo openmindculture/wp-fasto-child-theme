@@ -2,7 +2,7 @@
 
 ## 1.8.0-plus-non-free: improve performance (2024-09-22)
 
-* hide (zero) comment count and author name
+* hide (zero) comment count
 * disable mobile image float to prevent single-word or single-letter columns
 * set unique Docker container name to prevent name conflicts with similar WordPress projects
 

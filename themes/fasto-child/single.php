@@ -31,10 +31,8 @@ $fasto_wordpress_default_date_format = get_option( 'date_format' ) ;
 				<?php fasto_cat_breadcrumb(); ?>
 				<h1 class="article-title"><?php the_title(); ?></h1>
 				<div class="author-date">
-					<!-- BEGIN patch: hide author name -->
-					<?php /* <a class="body-color author-url" href="<?php echo esc_url( get_author_posts_url( get_the_author_meta( 'ID' ), get_the_author_meta( 'user_nicename' ) ) ); ?>" class="color-1"><?php echo esc_html( get_the_author_meta( 'nickname' ) ); ?></a> */ ?>
-					<?php /* <div class="vertical-separator"></div> */ ?>
-					<!-- END patch: hide author name -->
+					<a class="body-color author-url" href="<?php echo esc_url( get_author_posts_url( get_the_author_meta( 'ID' ), get_the_author_meta( 'user_nicename' ) ) ); ?>" class="color-1"><?php echo esc_html( get_the_author_meta( 'nickname' ) ); ?></a>
+					<div class="vertical-separator"></div>
 					<?php echo esc_html( get_the_date( $fasto_wordpress_default_date_format ) );?>
 					<!-- BEGIN patch: hide comment count -->
 					<?php /* <div class="vertical-separator"></div> */ ?>
