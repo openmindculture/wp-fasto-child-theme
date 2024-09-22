@@ -30,7 +30,7 @@ While wp-fasto-child-theme is distributed under the GPL license,the optional MyF
 
 ## Installation 
 
-- create or [download a zip archive](https://github.com/openmindculture/wp-fasto-child-theme/releases/download/1.0.0/fasto-child-1.0.0.zip) of the directory `fasto-child`
+- create or [download a zip archive](https://github.com/openmindculture/wp-fasto-child-theme/releases/) of the directory `fasto-child`
 - open WordPress administration (usually `/wp-admin`)
 - open themes page
 - add theme by uploading zip file
