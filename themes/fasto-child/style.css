@@ -99,6 +99,12 @@ footer .widget p a:visited {
     aspect-ratio: 16/9;
 }
 
+.alignright {
+	float: none;
+	margin: 0;
+	display: block;
+}
+
 @media (min-width: 1024px) {
 	/* 2-column footer */
     #footer-widgets .col-desktop-4:nth-child(2) {
