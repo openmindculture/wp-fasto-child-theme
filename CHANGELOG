@@ -1,5 +1,11 @@
 # Changelog
 
+## 1.8.0-plus-non-free: improve performance (2024-09-22)
+
+* hide (zero) comment count on mobile
+* disable mobile image float to prevent single-word or single-letter columns
+* set unique Docker container name to prevent name conflicts with similar WordPress projects
+
 ## 1.7.0-plus-non-free: improve performance (2024-07-08)
 
 * disable Heartbeat except when editing to improve performance

@@ -17,6 +17,7 @@ minor theme modifications for using [fasto](https://wordpress.org/support/theme/
 - [x] new web fonts
 - [x] new and experimental CSS features as progressive enhancement
 - [x] utility classes for custom layout
+- [x] performance optimization: disable WordPress heartbeat
 
 ### optional web fonts (non-free)
 
