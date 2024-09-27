@@ -47,3 +47,4 @@ if (!is_admin() || $pagenow != 'post.php') {
 		wp_deregister_script('heartbeat');
 	}, 1 );
 }
+

@@ -1,5 +1,9 @@
 # Changelog
 
+## 1.9.0-plus-non-free: improve technical SEO (2024-09-26)
+
+* prevent multiple H1 headings
+
 ## 1.8.0-plus-non-free: improve performance (2024-09-22)
 
 * hide (zero) comment count
