@@ -141,6 +141,10 @@ a, .color-1, .widget .color-1, .widget a:hover, .sub-menu .current-menu-item > a
     color: #114791;
 }
 
+header#theme-header .site-title a, h1 a {
+	color: #0e1638;
+}
+
 .post-category .category-link {
 	background-color: #96511c;
 	height: 20px;

@@ -6,18 +6,7 @@ minor theme modifications for using [fasto](https://wordpress.org/support/theme/
 
 ## Modifications
 
-- [x] text 404 without "oh boy"
-- [x] instant focus in search input
-- [x] footer "made by" => "theme made by"
-- [x] footer only 2 columns
-- [x] modified poster image style
-- [x] mobile header more calm and compact
-- [x] accessibility: darker default font for better readability
-- [x] modified category colors
-- [x] new web fonts
-- [x] new and experimental CSS features as progressive enhancement
-- [x] utility classes for custom layout
-- [x] performance optimization: disable WordPress heartbeat
+see [CHANGELOG](./CHANGELOG)
 
 ### optional web fonts (non-free)
 
@@ -27,6 +16,8 @@ minor theme modifications for using [fasto](https://wordpress.org/support/theme/
 The optional web fonts, [Healthy Freak](https://www.myfonts.com/fonts/vozzy/healthy-freak/) by [Oleg Voznyy](https://www.myfonts.com/foundry/vozzy/), and  [Liebe Ruth](https://liebefonts.com/fonts/lieberuth) by [Ulrike Rausch](https://liebefonts.com/about) have been purchased by Ingo Steinke via [MyFonts.com](https://www.myfonts.com/) (Order # M12889860, Webfont Build ID 4424710).
 
 While wp-fasto-child-theme is distributed under the GPL license,the optional MyFontsWebfontsKit is **not** covered by the GPL and may **not** be used on other websites without a valid license.
+
+This is not a free them because of the included licensed fonts! If you want to use it, please fork your own version and replace them!
 
 ## Installation 
 
