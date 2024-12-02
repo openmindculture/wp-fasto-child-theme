@@ -13,6 +13,7 @@
 <meta charset="<?php bloginfo('charset'); ?>">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <?php wp_head(); ?>
+<meta name="blogarama-site-verification" content="blogarama-6a414a1a-408c-47d6-acea-3a8694f29156">
 </head>
 <body <?php body_class(); ?>>
 <?php wp_body_open(); //added backward compatibility for this function in functions/theme.php ?>
