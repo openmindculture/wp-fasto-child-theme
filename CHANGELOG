@@ -1,5 +1,13 @@
 # Changelog
 
+## 2.0.0-plus-non-free: improve readability (2024-12-12)
+
+* fix margins below floatable images on mobile
+* prevent unnecessary line break after month on mobile
+* increase default font size on desktop
+
+* prevent multiple H1 headings
+
 ## 1.9.0-plus-non-free: improve technical SEO (2024-09-26)
 
 * prevent multiple H1 headings

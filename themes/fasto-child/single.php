@@ -33,7 +33,9 @@ $fasto_wordpress_default_date_format = get_option( 'date_format' ) ;
 				<div class="author-date">
 					<a class="body-color author-url" href="<?php echo esc_url( get_author_posts_url( get_the_author_meta( 'ID' ), get_the_author_meta( 'user_nicename' ) ) ); ?>" class="color-1"><?php echo esc_html( get_the_author_meta( 'nickname' ) ); ?></a>
 					<div class="vertical-separator"></div>
-					<?php echo esc_html( get_the_date( $fasto_wordpress_default_date_format ) );?>
+					<!-- BEGIN patch: add stylable element -->
+					<span class="author-date-date"><?php echo esc_html( get_the_date( $fasto_wordpress_default_date_format ) );?></span>
+					<!-- END patch: add stylable element -->
 					<!-- BEGIN patch: hide comment count -->
 					<?php /* <div class="vertical-separator"></div> */ ?>
 					<?php
