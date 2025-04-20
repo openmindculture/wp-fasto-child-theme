@@ -291,3 +291,17 @@ h4.font-alt {
 	font-size: 30px;
 	font-weight: normal;
 }
+
+/* hide outdated elements */
+ul.social-share {
+	display: none;
+}
+
+.site-grid-inner .articles .post.sticky .date-published {
+	display: none;
+}
+
+.related-articles:has(.fasto-row:empty) {
+	display: none;
+}
+
