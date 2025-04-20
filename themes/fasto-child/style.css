@@ -280,3 +280,14 @@ nav .lang-item-en a img {
 		max-width: 100%;
 	}
 }
+
+/* alternative typography options */
+h3.font-alt {
+	font-size: 36px;
+	font-weight: normal;
+}
+
+h4.font-alt {
+	font-size: 30px;
+	font-weight: normal;
+}
