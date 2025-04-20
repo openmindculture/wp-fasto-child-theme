@@ -305,3 +305,8 @@ ul.social-share {
 	display: none;
 }
 
+/* customize patched post teaser date */
+.date-published .date-year {
+	line-height: 1;
+	color: #000;
+}

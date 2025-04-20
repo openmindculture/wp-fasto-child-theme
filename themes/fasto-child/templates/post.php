@@ -15,8 +15,9 @@
 			<p><?php fasto_excerpt( 130 ); ?></p>
 		</div>
 		<div class="date-published">
-			<span class="big"><?php echo esc_html( get_the_date( 'd' ) ); ?></span>
-			<span class="small"><?php echo esc_html( get_the_date( 'M' ) ); ?></span>
-		</div> 
+			<span class="big date-day"><?php echo esc_html( get_the_date( 'd' ) ); ?></span>
+			<span class="small date-month"><?php echo esc_html( get_the_date( 'M' ) ); ?></span>
+			<span class="small date-year"><?php echo esc_html( get_the_date( 'Y' ) ); ?></span>
+		</div>
 	</article>
 </div>
