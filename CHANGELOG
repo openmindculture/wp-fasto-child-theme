@@ -1,5 +1,11 @@
 # Changelog
 
+## 2.1.0-plus-non-free: improve appearance (2025-04-20)
+
+* add year to post teaser date
+* add alternative typography options
+* hide outdated elements
+
 ## 2.0.0-plus-non-free: improve readability (2024-12-12)
 
 * fix margins below floatable images on mobile
