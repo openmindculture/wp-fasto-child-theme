@@ -31,7 +31,7 @@ $fasto_wordpress_default_date_format = get_option( 'date_format' ) ;
 				<?php fasto_cat_breadcrumb(); ?>
 				<h1 class="article-title"><?php the_title(); ?></h1>
 				<div class="author-date">
-					<a class="body-color author-url" href="<?php echo esc_url( get_author_posts_url( get_the_author_meta( 'ID' ), get_the_author_meta( 'user_nicename' ) ) ); ?>" class="color-1"><?php echo esc_html( get_the_author_meta( 'nickname' ) ); ?></a>
+					<span class="body-color author-url" class="color-1"><?php echo esc_html( get_the_author_meta( 'nickname' ) ); ?></span>
 					<div class="vertical-separator"></div>
 					<!-- BEGIN patch: add stylable element -->
 					<span class="author-date-date"><?php echo esc_html( get_the_date( $fasto_wordpress_default_date_format ) );?></span>

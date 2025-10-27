@@ -16,7 +16,7 @@
 
     function modified_fasto_developer_credit(){
         $url = 'https://wowlayers.com/';
-        echo '<div class="copyright-fasto">'.esc_html__( 'WordPress theme based on fasto by ','fasto' ).'<a href="'. $url .'" target="_blank">'.esc_html__( 'WOWLayers.com','fasto' ).'</a></div>';
+        echo '<div class="copyright-fasto">'.esc_html__( 'WordPress theme based on fasto by ','fasto' ).'<a href="'. $url .'" target="_blank" rel="nofollow">'.esc_html__( 'WOWLayers.com','fasto' ).'</a></div>';
     }
 
     function child_remove_parent_function() {
@@ -48,3 +48,11 @@ if (!is_admin() || $pagenow != 'post.php') {
 	}, 1 );
 }
 
+/* SEO: disable author page archive if most content is by the same author */
+function disable_author_archives() {
+	if (is_author()) {
+		wp_redirect(home_url(), 301);
+		exit;
+	}
+}
+add_action('template_redirect', 'disable_author_archives');
