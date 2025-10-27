@@ -5,7 +5,7 @@
  Author:       Ingo Steinke
  Author URI:   https://www.ingo-steinke.com/
  Template:     fasto
- Version:      2.1.0
+ Version:      2.2.0
  License:      GNU General Public License v2 or later (except for optional non-free web fonts)
  License URI:  http://www.gnu.org/licenses/gpl-2.0.html
  Tags:         Tags: 404, inclusive, footer, search, ux, usability, accessibility
@@ -309,4 +309,54 @@ ul.social-share {
 .date-published .date-year {
 	line-height: 1;
 	color: #000;
+}
+
+.omc-flex-gallery {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	flex-gap: 1rem;
+	gap: 1rem;
+}
+.omc-flex-gallery.flex-nowrap {
+	flex-wrap: nowrap;
+}
+.omc-flex-gallery > * {
+	text-align: center;
+}
+
+.omc-flex-gallery img {
+	height: 300px;
+	width: auto;
+}
+.omc-flex-gallery-3-3 img {
+	height: 300px;
+}
+.omc-flex-gallery-3-3.has-images-h400 img {
+	height: 400px;
+}
+
+.omc-flex-gallery-2-2 img {
+	height: 400px;
+}
+
+#footer-widgets > div {
+	flex: 1 1 100%;
+	max-width: unset;
+	text-align: center;
+	align-content: center;
+}
+
+@media (max-width: 1300px) {
+	.omc-flex-gallery > * {
+		flex-basis: 100% !important;
+	}
+	.omc-flex-gallery-2-2 img {
+		height: auto;
+	}
+}
+
+.omc-flex-gallery-3-3.flex-nowrap.has-images-h400 img {
+	width: auto;
+	height: auto
 }
