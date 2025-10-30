@@ -88,6 +88,19 @@ footer .widget p a {
     color: white;
 }
 
+footer .widget p a:hover {
+	color: #ebc036;
+}
+
+footer .widget .tagcloud a {
+	font-size: 20px;
+}
+
+footer .widget .tagcloud a:hover {
+	background-color: #fff;
+	color: #114791;
+}
+
 footer .widget p a:link,
 footer .widget p a:visited {
     text-decoration: underline;
