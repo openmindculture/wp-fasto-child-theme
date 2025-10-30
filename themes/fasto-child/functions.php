@@ -56,3 +56,12 @@ function disable_author_archives() {
 	}
 }
 add_action('template_redirect', 'disable_author_archives');
+
+/* SEO: remove "Archive" or "Archives" prefix from archive titles */
+add_filter( 'get_the_archive_title', function( $title ) {
+
+	// Remove prefix for categories
+	if (is_category()) {
+		$title = single_cat_title('', false);
+	}
+});
