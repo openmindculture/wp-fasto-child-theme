@@ -1,5 +1,11 @@
 # Changelog
 
+## 2.2.2-plus-non-free: search engine optimization (2025-10-30)
+
+* SEO: disable author page archive if most content is by the same author
+* SEO: remove Archive or Archives prefix from archive titles
+* SEO: don't show and link post tags
+
 ## 2.2.0-plus-non-free: flex gallery layout (2025-10-27)
 
 * add custom flex gallery styles
