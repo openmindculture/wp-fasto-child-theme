@@ -70,10 +70,7 @@ $fasto_wordpress_default_date_format = get_option( 'date_format' ) ;
 					<?php } ?>
 				</div>
 
-				<?php if ( has_tag() ) { ?>
-					<?php the_tags( '<ul class="tags"><li>', '</li><li>', '</li></ul>' ); ?>
-					<?php if ( comments_open() ) { ?><div class="separator single"></div><?php } ?>
-				<?php }  ?>
+				<?php /* Open Mind Culture patch: don't show and link post tags */ ?>
 				<div class="separator single"></div>
 				<?php get_template_part( 'templates/adjacent-posts' ); ?>
 				<div class="separator single"></div>
