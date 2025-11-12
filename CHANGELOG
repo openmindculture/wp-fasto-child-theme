@@ -4,6 +4,7 @@
 
 * SEO: show category description on category archives first pages
 * SEO: hide breadcrumb navigation on archive pages
+* a11y: fix color contrast accessibility
 
 ## 2.2.2-plus-non-free: search engine optimization (2025-10-30)
 
