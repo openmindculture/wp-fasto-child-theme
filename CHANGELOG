@@ -1,10 +1,18 @@
 # Changelog
 
+## 2.2.4-plus-non-free: display fixes, SEO improvements (2025-11-12)
+
+* SEO: show category description on category archives first page
+* SEO: hide breadcrumb navigation on category archive page
+* SEO: remove the word Archive from category archive page title
+* fix markup errors in single page breadcrumb navigation
+
 ## 2.2.2-plus-non-free: search engine optimization (2025-10-30)
 
 * SEO: disable author page archive if most content is by the same author
 * SEO: remove Archive or Archives prefix from archive titles
 * SEO: don't show and link post tags
+* accessible footer link style
 
 ## 2.2.0-plus-non-free: flex gallery layout (2025-10-27)
 
