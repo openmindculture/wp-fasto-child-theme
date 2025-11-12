@@ -8,12 +8,12 @@
  */
 ?>
 <?php if ( !fasto_is_home_or_front() ) { ?>
-	<?php if ( !is_archive() ) { ?>
-		<div class="breadcrumb-navigation">
-	<?php } ?>
+<div class="breadcrumb-navigation">
 <?php if ( is_category() ) { ?>
 <h1 class="page-title"><?php single_cat_title(); ?></h1>
-<?php fasto_cat_breadcrumb(); ?>
+<?php if ( !is_archive() ) { ?>
+	<?php fasto_cat_breadcrumb(); ?>
+<?php } ?>
 <?php } ?>
 
 <?php if ( is_author() ) { ?>

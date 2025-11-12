@@ -11,6 +11,12 @@ get_header(); ?>
 
 <?php get_template_part( 'templates/breadcrumb' ); ?>
 
+<?php if ( is_category() && !is_paged() ) { ?>
+	<div class="fasto_child_category_description">
+		<?php echo category_description(); ?>
+	</div>
+<?php } ?>
+
 <?php $fasto_articles_grid = $fasto_row_articles = '';
 if ( fasto_mod( 'fasto_blog_layout' ) == 'grid-3' || fasto_mod( 'fasto_blog_layout' ) == 'grid-4' ){
 	$fasto_row_articles = ' fasto-row ';
