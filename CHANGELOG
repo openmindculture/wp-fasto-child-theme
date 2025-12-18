@@ -1,5 +1,9 @@
 # Changelog
 
+## 2.3.0-plus-non-free: gallery layout improvement (2025-12-18)
+
+* add class .omc-flex-gallery-3-3-24 with 24% width children
+
 ## 2.2.5-plus-non-free: display fixes, SEO improvements (2025-11-12)
 
 * SEO: show category description on category archives first pages
