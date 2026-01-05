@@ -19,7 +19,7 @@
 <?php wp_body_open(); //added backward compatibility for this function in functions/theme.php ?>
 <a class="skip-link screen-reader-text" href="#content"><?php esc_html_e( 'Skip to content', 'fasto' ); ?></a>
 <div class="overlay"></div>
-<div class="site-grid"><!-- start .site-grid -->
+<div class="site-grid" id="fasto-reader-mode-target"><!-- start .site-grid -->
 <header id="theme-header" role="banner" class="fasto-child"><!-- header#theme-header -->
 <?php
 	include ('inc/functions/fasto_child_display_header.php');

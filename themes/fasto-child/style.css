@@ -415,6 +415,11 @@ ul.social-share {
 	height: auto
 }
 
+body #fasto-reader-mode-target h1,
+body #fasto-reader-mode-target h2,
+body #fasto-reader-mode-target h3,
+body #fasto-reader-mode-target h4,
+body #fasto-reader-mode-target h5,
 body.fasto-reader-mode h1,
 body.fasto-reader-mode h2,
 body.fasto-reader-mode h3,
@@ -424,16 +429,31 @@ body.fasto-reader-mode h5 {
 	font-weight: bold;
 }
 
+body #fasto-reader-mode-target article p,
 body.fasto-reader-mode article p {
 	font-size: 18px;
 }
 
+body #fasto-reader-mode-target .post-category .category-link,
 body.fasto-reader-mode .post-category .category-link {
 	background: white;
 	color: black;
-	font-size: 15px;
 	border: solid 1px black;
+	font-size: 15px;
 	padding: 15px 10px;
+}
+
+#fasto-reader-mode-trigger svg {
+	fill: #563a6a;
+}
+
+body #fasto-reader-mode-target #fasto-reader-mode-trigger,
+body.fasto-reader-mode #fasto-reader-mode-trigger svg {
+	fill: #8Bc34a;
+}
+
+#fasto-reader-mode-trigger:hover svg {
+	fill: #ff7c34;
 }
 
 @media print {
