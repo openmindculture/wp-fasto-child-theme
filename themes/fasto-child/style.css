@@ -167,11 +167,19 @@ header#theme-header .site-title a, h1 a {
 }
 
 .post-category .category-link {
-	background-color: #96511c;
+	background-color: #563a6a;
 	height: 20px;
 	padding: 0 4px;
 	white-space: nowrap;
 	text-transform: none;
+}
+
+#searchform input[type="submit"] {
+	background-color: #563a6a;
+}
+
+.social-and-search a svg {
+	fill: #563a6a;
 }
 
 .fasto_child_category_description > p:first-child {
