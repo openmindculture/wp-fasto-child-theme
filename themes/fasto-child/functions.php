@@ -1,5 +1,4 @@
 <?php
-
     function child_theme_styles() {
         wp_enqueue_style( 'parent-style', get_template_directory_uri() . '/style.css' );
         wp_enqueue_style( 'child-theme-css', get_stylesheet_directory_uri() .'/style.css' , array('parent-style'));
@@ -38,8 +37,6 @@
 	}
 	add_action( 'after_setup_theme', 'example_theme_support' );
 
-define( 'WP_POST_REVISIONS', 2 ); // restrict the number of stored revisions per post to improve performance
-
 // disable WP Heartbeat API, except for editor views where we need it to trigger auto-saving
 global $pagenow;
 if (!is_admin() || $pagenow != 'post.php') {
@@ -65,3 +62,17 @@ add_filter( 'get_the_archive_title', function( $title ) {
 		$title = single_cat_title('', false);
 	}
 });
+
+// override deprecated parent theme HTML5 configuration:
+function fasto_child_remove_parent_html5() {
+	remove_theme_support( 'html5' );
+
+	add_theme_support( 'html5', array(
+		'search-form',
+		'comment-form',
+		'comment-list',
+		'gallery',
+		'caption',
+	) );
+}
+add_action( 'after_setup_theme', 'fasto_child_remove_parent_html5', 11 );

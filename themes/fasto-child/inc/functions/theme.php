@@ -552,8 +552,10 @@ fasto_output_social_share() - Output social share
 function fasto_output_social_share(){
 global $post;
 //post thumbnail
-$post_thumbnail_arr = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ), 'full-single' );
-$post_thumbnail = $post_thumbnail_arr[0];
+if ( has_post_thumbnail ) {
+	$post_thumbnail_arr = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ), 'full-single' );
+	$post_thumbnail = $post_thumbnail_arr[0];
+}
 $args = array( 'echo' => false );
 ?>
 <div class="social-share-holder">
