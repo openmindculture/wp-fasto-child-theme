@@ -1,5 +1,11 @@
 # Changelog
 
+## 2.3.2-plus-non-free: improve visual readability and accessibility (2026-xx-yy)
+
+* native reader mode with less freaky headline font (TODO)
+* verify (and improve) print styles (TODO)
+* prevent category capitalization of conjunctions
+
 ## 2.3.1-plus-non-free: improve content discovery (2026-01-05)
 
 * improve related posts accuracy by using tags and categories

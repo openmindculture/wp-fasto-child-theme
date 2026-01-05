@@ -405,7 +405,26 @@ ul.social-share {
 	height: auto
 }
 
+body.fasto-reader-mode h1,
+body.fasto-reader-mode h2,
+body.fasto-reader-mode h3,
+body.fasto-reader-mode h4,
+body.fasto-reader-mode h5 {
+	font-family: LiebeRuth-Regular, serif;
+	font-weight: bold;
+}
 
+body.fasto-reader-mode article p {
+	font-size: 18px;
+}
+
+body.fasto-reader-mode .post-category .category-link {
+	background: white;
+	color: black;
+	font-size: 15px;
+	border: solid 1px black;
+	padding: 15px 10px;
+}
 
 @media print {
 	.social-and-search {
