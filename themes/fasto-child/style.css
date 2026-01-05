@@ -5,7 +5,7 @@
  Author:       Ingo Steinke
  Author URI:   https://www.ingo-steinke.com/
  Template:     fasto
- Version:      2.3.1
+ Version:      2.3.2
  Tested up to: 6.9
  Requires PHP: 7.0
  License:      GNU General Public License v2 or later (except for optional non-free web fonts)
@@ -171,6 +171,7 @@ header#theme-header .site-title a, h1 a {
 	height: 20px;
 	padding: 0 4px;
 	white-space: nowrap;
+	text-transform: none;
 }
 
 .fasto_child_category_description > p:first-child {
@@ -382,7 +383,7 @@ ul.social-share {
 }
 
 @media (max-width: 1300px) {
-	.omc-flex-gallery-3-3-24 > *,
+	.omc-flex-gallery-3-3-24 > *:not(style),
 	.omc-flex-gallery > * {
 		flex-basis: 100% !important;
 	}
@@ -394,4 +395,31 @@ ul.social-share {
 .omc-flex-gallery-3-3.flex-nowrap.has-images-h400 img {
 	width: auto;
 	height: auto
+}
+
+@media print {
+	.social-and-search {
+		display: none;
+	}
+	.post-category.single a,
+	.post-category.single span {
+		padding-left: 0;
+	}
+	.alignright,
+	a img.alignright {
+		float: right !important;
+		margin-left: 10pt !important;
+	}
+	.omc-flex-gallery {
+		display: flex !important;
+	}
+	.omc-flex-gallery-3-3 > * {
+		max-width: 28% !important;
+		padding: 0;
+	}
+	.omc-flex-gallery-3-3 figure,
+	.omc-flex-gallery-3-3 img {
+		max-width: unset;
+		width: auto;
+	}
 }
