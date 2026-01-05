@@ -63,6 +63,17 @@ add_filter( 'get_the_archive_title', function( $title ) {
 	}
 });
 
+function custom_nav_menu_item( $items, $args ) {
+	if ( $args->theme_location == 'primary' ) {
+		include_once (get_stylesheet_directory() . '/inc/fasto_child_reader_mode_trigger.php');
+		$items .= '<li class="custom-menu-item fasto-child-mobile-only">'
+				. fasto_child_reader_mode_trigger( ' Reader mode' )
+				. '</li>';
+	}
+	return $items;
+}
+add_filter( 'wp_nav_menu_items', 'custom_nav_menu_item', 10, 2 );
+
 // override deprecated parent theme HTML5 configuration:
 function fasto_child_remove_parent_html5() {
 	remove_theme_support( 'html5' );

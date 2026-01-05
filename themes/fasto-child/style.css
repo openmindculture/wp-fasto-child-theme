@@ -180,7 +180,6 @@ header#theme-header .site-title a, h1 a {
 
 /* accessible pure CSS fallback for search form trigger button */
 header #searchform:target,
-header #searchform:target-within,
 header #searchform.active{
 	opacity: 1;
 	width:calc( 100% - 140px );
@@ -415,11 +414,11 @@ ul.social-share {
 	height: auto
 }
 
-body #fasto-reader-mode-target h1,
-body #fasto-reader-mode-target h2,
-body #fasto-reader-mode-target h3,
-body #fasto-reader-mode-target h4,
-body #fasto-reader-mode-target h5,
+body #fasto-reader-mode-target:target h1,
+body #fasto-reader-mode-target:target h2,
+body #fasto-reader-mode-target:target h3,
+body #fasto-reader-mode-target:target h4,
+body #fasto-reader-mode-target:target h5,
 body.fasto-reader-mode h1,
 body.fasto-reader-mode h2,
 body.fasto-reader-mode h3,
@@ -429,12 +428,12 @@ body.fasto-reader-mode h5 {
 	font-weight: bold;
 }
 
-body #fasto-reader-mode-target article p,
+body #fasto-reader-mode-target:target article p,
 body.fasto-reader-mode article p {
 	font-size: 18px;
 }
 
-body #fasto-reader-mode-target .post-category .category-link,
+body #fasto-reader-mode-target:target .post-category .category-link,
 body.fasto-reader-mode .post-category .category-link {
 	background: white;
 	color: black;
@@ -443,17 +442,46 @@ body.fasto-reader-mode .post-category .category-link {
 	padding: 15px 10px;
 }
 
-#fasto-reader-mode-trigger svg {
+.fasto-reader-mode-trigger svg {
 	fill: #563a6a;
+	width: 24px;
+	height: 24px;
 }
 
-body #fasto-reader-mode-target #fasto-reader-mode-trigger,
-body.fasto-reader-mode #fasto-reader-mode-trigger svg {
+ul.nav-menu .fasto-child-mobile-only {
+	margin-top: 12px;
+	font-weight: bold;
+	font-size: 18px;
+	margin-top: 12px;
+}
+
+ul.nav-menu .fasto-child-mobile-only .fasto-reader-mode-trigger svg {
+	margin: 4px 4px 0 -4px;
+	float: left;
+}
+
+.social-and-search .fasto-child-desktop-only .fasto-reader-mode-trigger svg {
+	margin: 0 4px -2px 0;
+}
+
+body #fasto-reader-mode-target:target .fasto-reader-mode-trigger svg,
+body.fasto-reader-mode .fasto-reader-mode-trigger svg {
 	fill: #8Bc34a;
 }
 
-#fasto-reader-mode-trigger:hover svg {
+.fasto-reader-mode-trigger:hover svg {
 	fill: #ff7c34;
+}
+
+@media (max-width: 1024px) {
+	.social-and-search .fasto-child-desktop-only {
+		display: none;
+	}
+}
+@media (min-width: 1024px) {
+	ul.nav-menu .fasto-child-mobile-only {
+		display: none;
+	}
 }
 
 @media print {

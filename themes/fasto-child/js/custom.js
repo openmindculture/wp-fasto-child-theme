@@ -11,20 +11,22 @@ window.addEventListener('DOMContentLoaded', () => {
 	if (localStorage) {
 		activatedReaderMode = localStorage.getItem('readerMode');
 	}
-	if (!prefersMoreContrast && !activatedReaderMode) {
-		document.body.classList.remove(classNameReaderMode);
-	} else {
+	if (activatedReaderMode) {
 		document.body.classList.add(classNameReaderMode);
 	}
-	var readerModeToggle = document.getElementById('fasto-reader-mode-trigger');
-	if (readerModeToggle) {
-		readerModeToggle.addEventListener('click', function () {
+	var readerModeToggles = document.getElementsByClassName('fasto-reader-mode-trigger');
+	for (var i = 0; i < readerModeToggles.length; i++) {
+		var readerModeToggle = readerModeToggles[i];
+		readerModeToggle.addEventListener('click', function (event) {
+			event.preventDefault();
 			if (document.body.className.indexOf(classNameReaderMode) > -1) {
+				console.log('toggle must remove');
 				document.body.classList.remove(classNameReaderMode);
 				if (localStorage) {
 					localStorage.removeItem('readerMode');
 				}
 			} else {
+				console.log('toggle must add');
 				document.body.classList.add(classNameReaderMode);
 				if (localStorage) {
 					localStorage.setItem('readerMode', 'true');
