@@ -1,11 +1,13 @@
-jQuery(".search-trigger").on( "click", function() {
-    /* focus on the search input form field */
-    document.getElementById('s').focus();
-});
-
 window.addEventListener('DOMContentLoaded', () => {
-	let classNameReaderMode = 'fasto-reader-mode';
-	let activatedReaderMode = false;
+	var searchTrigger = document.getElementById('search-trigger');
+	if (searchTrigger) {
+		searchTrigger.addEventListener('click', function () {
+			document.getElementById('s').focus();
+		});
+	}
+
+	var classNameReaderMode = 'fasto-reader-mode';
+	var activatedReaderMode = false;
 	if (localStorage) {
 		activatedReaderMode = localStorage.getItem('readerMode');
 	}
@@ -14,7 +16,7 @@ window.addEventListener('DOMContentLoaded', () => {
 	} else {
 		document.body.classList.add(classNameReaderMode);
 	}
-	let readerModeToggle = document.getElementById('fasto-reader-mode-trigger');
+	var readerModeToggle = document.getElementById('fasto-reader-mode-trigger');
 	if (readerModeToggle) {
 		readerModeToggle.addEventListener('click', function () {
 			if (document.body.className.indexOf(classNameReaderMode) > -1) {
