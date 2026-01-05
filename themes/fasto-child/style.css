@@ -178,6 +178,16 @@ header#theme-header .site-title a, h1 a {
 	background-color: #563a6a;
 }
 
+/* accessible pure CSS fallback for search form trigger button */
+header #searchform:target,
+header #searchform:target-within,
+header #searchform.active{
+	opacity: 1;
+	width:calc( 100% - 140px );
+	visibility: visible;
+	transform:translateY(0);
+}
+
 .social-and-search a svg {
 	fill: #563a6a;
 }
