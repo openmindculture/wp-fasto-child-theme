@@ -8,6 +8,8 @@ minor theme modifications for using [fasto](https://wordpress.org/support/theme/
 
 see [CHANGELOG](./CHANGELOG)
 
+Some modifications, like more accurate related post suggestions, might slow down the theme unless pages are cached by using a caching plugin like W3TC or a reverse proxy server.
+
 ### optional web fonts (non-free)
 
 - [x] optional MyFontsWebfontsKit **NOT free to use**!

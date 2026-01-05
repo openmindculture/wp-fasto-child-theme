@@ -1,5 +1,11 @@
 # Changelog
 
+## 2.3.1-plus-non-free: improve content discovery (2026-01-05)
+
+* improve related posts accuracy by using tags and categories
+* set related posts aside semantically
+* fix duplicate and deprecated configuration code
+
 ## 2.3.0-plus-non-free: gallery layout improvement (2025-12-18)
 
 * add class .omc-flex-gallery-3-3-24 with 24% width children
@@ -20,7 +26,6 @@
 ## 2.2.0-plus-non-free: flex gallery layout (2025-10-27)
 
 * add custom flex gallery styles
-
 
 ## 2.1.0-plus-non-free: improve appearance (2025-04-20)
 

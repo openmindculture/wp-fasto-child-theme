@@ -111,20 +111,61 @@ $fasto_wordpress_default_date_format = get_option( 'date_format' ) ;
 		<p><?php echo esc_html( fasto_author_info( 'description' ) ); ?></p>
 	</div><!-- end .author-box -->
 
-	<div class="related-articles"><!-- start .related-articles -->
+	<aside><div class="related-articles"><!-- start .related-articles -->
 		<h2 class="title"><?php echo esc_html__( 'You might also like','fasto' );  ?></h2>
 		<div class="fasto-row">
+
 			<?php
-			$fasto_cat = get_the_category( $post->ID );
-			$fasto_args = array( 'post_type' => array( 'post' ),'posts_per_page' => 3, 'post__not_in' => array( $post->ID ) , 'cat' => $fasto_cat[0]->term_id );
-			$fasto_query = new WP_Query( $fasto_args );
-			if( $fasto_query->have_posts() ) {
-				while( $fasto_query->have_posts() ) {
-					$fasto_query->the_post();
-					get_template_part( 'templates/post' );
+			// optional retrieval by tag match (slower, more accurate)
+			// omits adjacent previous, next posts already displayed before
+			include ('inc/functions/fasto_child_get_related_posts_ids.php');
+			$fasto_related_posts_ids = fasto_child_get_related_posts_ids();
+			if ( !empty( $fasto_related_posts_ids ) ) {
+				$fasto_child_related_query = new WP_Query( array(
+					'post__in' => $fasto_related_posts_ids,
+					'post__not_in' => get_option("sticky_posts"),
+					'orderby' => 'post__in'
+				));
+				if( $fasto_child_related_query->have_posts() ) {
+					while( $fasto_child_related_query->have_posts() ) {
+						$fasto_child_related_query->the_post();
+						get_template_part( 'templates/post' );
+					}
+					wp_reset_postdata();
 				}
-				wp_reset_postdata();
-			} ?>
+			}
+
+			$fasto_count_missing_related = 3 - count( $fasto_related_posts_ids );
+
+			$fasto_args__not_in = array( $post->ID );
+			$fasto_prev_post = get_adjacent_post( false, '', false );
+			if ( $fasto_prev_post ) {
+				$fasto_args__not_in[] = $fasto_prev_post->ID;
+			}
+			$fasto_next_post = get_adjacent_post( false, '', true );
+			if ( $fasto_next_post ) {
+				$fasto_args__not_in[] = $fasto_next_post->ID;
+			}
+
+			// fallback: original quick lookup by category
+			if ( $fasto_count_missing_related > 0 ) {
+				$fasto_cat = get_the_category( $post->ID );
+				$fasto_args = array(
+					'post_type' => array( 'post' ),
+					'posts_per_page' => $fasto_count_missing_related,
+					'post__not_in' => $fasto_args__not_in,
+					'cat' => $fasto_cat[0]->term_id,
+				);
+				$fasto_query = new WP_Query( $fasto_args );
+				if( $fasto_query->have_posts() ) {
+					while( $fasto_query->have_posts() ) {
+						$fasto_query->the_post();
+						get_template_part( 'templates/post' );
+					}
+					wp_reset_postdata();
+				}
+			}
+			?>
 		</div>
-	</div><!-- end .related-articles -->
+	</div><!-- end .related-articles --></aside>
 <?php get_footer(); ?>
