@@ -1,7 +1,8 @@
 window.addEventListener('DOMContentLoaded', () => {
-	var searchTrigger = document.getElementById('search-trigger');
-	if (searchTrigger) {
-		searchTrigger.addEventListener('click', function () {
+	var searchTriggers = document.getElementsByClassName('search-trigger');
+	for (var i=0; i<searchTriggers.length; i++) {
+		searchTriggers[i].addEventListener('click', function () {
+			console.log('search trigger clicked');
 			document.getElementById('s').focus();
 		});
 	}
