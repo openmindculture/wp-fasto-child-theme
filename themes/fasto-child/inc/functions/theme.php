@@ -550,49 +550,7 @@ fasto_output_social_share() - Output social share
 =================================================================================================================
 */
 function fasto_output_social_share(){
-global $post;
-//post thumbnail
-if ( has_post_thumbnail ) {
-	$post_thumbnail_arr = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ), 'full-single' );
-	$post_thumbnail = $post_thumbnail_arr[0];
-}
-$args = array( 'echo' => false );
-?>
-<div class="social-share-holder">
-<ul class="social-share"><!-- social-share -->
-	<li>
-		<a target="_blank" data-post-id="<?php echo esc_attr( $post->ID );?>" href="<?php echo esc_url( 'https://www.facebook.com/sharer/sharer.php?u='.urlencode( get_permalink() ) ); ?>" aria-label="<?php esc_attr_e( 'Share article to Facebook','fasto' ); ?>" class="facebook">
-			<?php fasto_brands_svg( 'facebook',true ) ; # fasto_brands_svg() - safely escaped in functions/theme.php ?>
-		</a>
-	</li>
-
-	<li>
-		<a target="_blank" data-post-id="<?php echo esc_attr( $post->ID );?>" href="<?php echo esc_url( 'https://twitter.com/intent/tweet?text='.urlencode( the_title_attribute( $args ) ).'&amp;url='.urlencode( get_permalink() ) ); ?>" aria-label="<?php esc_attr_e( 'Share article to Twitter','fasto' ); ?>" class="twitter">
-			<?php fasto_brands_svg( 'twitter',true ) ; # fasto_brands_svg() - safely escaped in functions/theme.php ?>
-		</a>
-	</li>
-
-	<li>
-		<a target="_blank" data-post-id="<?php echo esc_attr( $post->ID );?>" href="<?php echo esc_url( 'https://pinterest.com/pin/create/button/?url=' . urlencode( get_permalink() ) . '&amp;description=' . urlencode( the_title_attribute( $args ) ) . ( esc_attr($post_thumbnail ) ? '&amp;media=' . urlencode( esc_attr( $post_thumbnail ) ) : '' ) ); ?>" aria-label="<?php esc_attr_e( 'Share article to Pinterest','fasto' ); ?>" class="pinterest">
-			<?php fasto_brands_svg( 'pinterest',true ) ; # fasto_brands_svg() - safely escaped in functions/theme.php ?>
-		</a>
-	</li>
-
-	<li>
-		<a target="_blank" data-post-id="<?php echo esc_attr( $post->ID );?>" href="<?php echo esc_url( 'https://www.linkedin.com/shareArticle?mini=true&url='.urlencode( get_permalink() ).'&amp;title='.urlencode( the_title_attribute( $args ) ) ); ?>&amp;summary=<?php echo esc_attr( urlencode( get_the_excerpt() ) ); ?>" aria-label="<?php esc_attr_e( 'Share article to LinkedIn','fasto' ); ?>" class="linkedin">
-				<?php fasto_brands_svg( 'linkedin',true ) ; # fasto_brands_svg() - safely escaped in functions/theme.php ?>
-			</a>
-	</li>
-
-	<li>
-		<a target="_blank" data-post-id="<?php echo esc_attr( $post->ID );?>" href="mailto:?subject=<?php echo esc_attr( urlencode( the_title_attribute( $args ) ) ); ?>&body=<?php echo esc_url( get_permalink() ); ?>" aria-label="<?php esc_attr_e( 'Share article to mail','fasto' ); ?>" class="mail">
-				<?php fasto_brands_svg( 'mail',true ) ; # fasto_brands_svg() - safely escaped in functions/theme.php ?>
-			</a>
-	</li>
-</ul><!--/ social-share -->
-</div>
-
-<?php
+?> <!-- Output social share removed on purpose --> <?php
 }
 
 /*

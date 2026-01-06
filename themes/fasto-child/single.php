@@ -33,10 +33,10 @@ $fasto_wordpress_default_date_format = get_option( 'date_format' ) ;
 				<div class="author-date">
 					<span class="body-color author-url" class="color-1"><?php echo esc_html( get_the_author_meta( 'nickname' ) ); ?></span>
 					<div class="vertical-separator"></div>
-					<!-- BEGIN patch: add stylable element -->
+					<?php /* <!-- BEGIN patch: add stylable element -->  */ ?>
 					<span class="author-date-date"><?php echo esc_html( get_the_date( $fasto_wordpress_default_date_format ) );?></span>
-					<!-- END patch: add stylable element -->
-					<!-- BEGIN patch: hide comment count -->
+					<?php /* <!-- END patch: add stylable element -->   */ ?>
+					<?php /* <!-- BEGIN patch: hide comment count --> */ ?>
 					<?php /* <div class="vertical-separator"></div> */ ?>
 					<?php
 					// printf(
@@ -45,12 +45,12 @@ $fasto_wordpress_default_date_format = get_option( 'date_format' ) ;
 					//	esc_html( number_format_i18n( get_comments_number() ) )
 					// );
 					?>
-					<!-- END patch: hide comment count -->
+					<?php /* <!-- END patch: hide comment count --> */ ?>
 				</div>
 				<div class="separator single"></div>
 
 				<div class="post-content">
-					<?php if ( fasto_mod( 'fasto_enable_social_share' ) == '1' ){ fasto_output_social_share(); } ?>
+					<?php /* <!-- pen Mind Culture patch: don't social media sharing buttons --> */ ?>
 					<div class="post-content-inner">
 						<?php the_content(); ?>
 					</div>
@@ -63,11 +63,6 @@ $fasto_wordpress_default_date_format = get_option( 'date_format' ) ;
 					);
 					wp_link_pages( $fasto_pagination_args );
 					?>
-					<?php if ( fasto_mod( 'fasto_enable_social_share_after' ) == '1' ){ ?>
-						<div class="after-post">
-							<?php fasto_output_social_share(); ?>
-						</div>
-					<?php } ?>
 				</div>
 
 				<?php /* Open Mind Culture patch: don't show and link post tags */ ?>
@@ -136,6 +131,7 @@ $fasto_wordpress_default_date_format = get_option( 'date_format' ) ;
 			}
 
 			$fasto_count_missing_related = 3 - count( $fasto_related_posts_ids );
+			echo "<!-- fasto_count_missing_related = 3 - count( fasto_related_posts_ids ) = $fasto_count_missing_related -->";
 
 			$fasto_args__not_in = array( $post->ID );
 			$fasto_prev_post = get_adjacent_post( false, '', false );
@@ -149,6 +145,7 @@ $fasto_wordpress_default_date_format = get_option( 'date_format' ) ;
 
 			// fallback: original quick lookup by category
 			if ( $fasto_count_missing_related > 0 ) {
+				echo "<!-- needs category based fallback recommendations -->";
 				$fasto_cat = get_the_category( $post->ID );
 				$fasto_args = array(
 					'post_type' => array( 'post' ),
@@ -156,6 +153,7 @@ $fasto_wordpress_default_date_format = get_option( 'date_format' ) ;
 					'post__not_in' => $fasto_args__not_in,
 					'cat' => $fasto_cat[0]->term_id,
 				);
+				echo "<!-- query args: $fasto_args -->";
 				$fasto_query = new WP_Query( $fasto_args );
 				if( $fasto_query->have_posts() ) {
 					while( $fasto_query->have_posts() ) {
