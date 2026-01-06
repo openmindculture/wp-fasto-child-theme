@@ -65,7 +65,7 @@ add_filter( 'get_the_archive_title', function( $title ) {
 
 function custom_nav_menu_item( $items, $args ) {
 	if ( $args->theme_location == 'primary' ) {
-		include_once (get_stylesheet_directory() . '/inc/fasto_child_reader_mode_trigger.php');
+		include_once (get_stylesheet_directory() . '/inc/functions/fasto_child_reader_mode_trigger.php');
 		$items .= '<li class="custom-menu-item fasto-child-mobile-only">'
 				. fasto_child_reader_mode_trigger( ' Reader mode' )
 				. '</li>';

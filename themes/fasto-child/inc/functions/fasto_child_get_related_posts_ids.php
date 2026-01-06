@@ -7,7 +7,7 @@ if (!defined('ABSPATH')) {
 ====================================================
 fasto_child_get_related_posts_ids()
 
-return IDs of up to 3 related posts by tag names
+return IDs of up to 4 related posts by tag names
 omitting the adjacent previous and next posts,
 omitting posts configured for omission in theme option, and
 omitting the current global post itself
@@ -34,10 +34,8 @@ AND object_id != {$post_id}
 ";
 
 	$fasto_sticky_posts = get_option('sticky_posts');
-	echo "<!-- get_option sticky_posts: {$fasto_sticky_posts} -->";
 	if ($fasto_sticky_posts) {
 		foreach($fasto_sticky_posts as $sticky_post_id) {
-			echo "<!-- omit sticky {$sticky_post_id} -->";
 			$fasto_child_related_query .= "
 AND object_id != {$sticky_post_id}
 		";
@@ -64,7 +62,7 @@ AND object_id != {$fasto_next_post_id}
 	$fasto_child_related_query .= "
 GROUP BY object_id
 ORDER BY COUNT(term_taxonomy_id) DESC
-LIMIT 3
+LIMIT 4
 ";
 
 	return $wpdb->get_col($fasto_child_related_query);

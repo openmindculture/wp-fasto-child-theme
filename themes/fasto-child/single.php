@@ -113,16 +113,20 @@ $fasto_wordpress_default_date_format = get_option( 'date_format' ) ;
 			<?php
 			// optional retrieval by tag match (slower, more accurate)
 			// omits adjacent previous, next posts already displayed before
+			// limit results and let function fetch 1 extra as omit sticky only seems to work in WP_Query
 			include ('inc/functions/fasto_child_get_related_posts_ids.php');
 			$fasto_related_posts_ids = fasto_child_get_related_posts_ids();
+			$fasto_related_posts_count = 0;
 			if ( !empty( $fasto_related_posts_ids ) ) {
 				$fasto_child_related_query = new WP_Query( array(
 					'post__in' => $fasto_related_posts_ids,
 					'post__not_in' => get_option("sticky_posts"),
-					'orderby' => 'post__in'
+					'orderby' => 'post__in',
+					'posts_per_page' => 3,
 				));
 				if( $fasto_child_related_query->have_posts() ) {
 					while( $fasto_child_related_query->have_posts() ) {
+						$fasto_related_posts_count++;
 						$fasto_child_related_query->the_post();
 						get_template_part( 'templates/post' );
 					}
@@ -130,8 +134,7 @@ $fasto_wordpress_default_date_format = get_option( 'date_format' ) ;
 				}
 			}
 
-			$fasto_count_missing_related = 3 - count( $fasto_related_posts_ids );
-			echo "<!-- fasto_count_missing_related = 3 - count( fasto_related_posts_ids ) = $fasto_count_missing_related -->";
+			$fasto_count_missing_related = 3 - $fasto_related_posts_count;
 
 			$fasto_args__not_in = array( $post->ID );
 			$fasto_prev_post = get_adjacent_post( false, '', false );
@@ -145,7 +148,6 @@ $fasto_wordpress_default_date_format = get_option( 'date_format' ) ;
 
 			// fallback: original quick lookup by category
 			if ( $fasto_count_missing_related > 0 ) {
-				echo "<!-- needs category based fallback recommendations -->";
 				$fasto_cat = get_the_category( $post->ID );
 				$fasto_args = array(
 					'post_type' => array( 'post' ),
@@ -153,7 +155,6 @@ $fasto_wordpress_default_date_format = get_option( 'date_format' ) ;
 					'post__not_in' => $fasto_args__not_in,
 					'cat' => $fasto_cat[0]->term_id,
 				);
-				echo "<!-- query args: $fasto_args -->";
 				$fasto_query = new WP_Query( $fasto_args );
 				if( $fasto_query->have_posts() ) {
 					while( $fasto_query->have_posts() ) {
