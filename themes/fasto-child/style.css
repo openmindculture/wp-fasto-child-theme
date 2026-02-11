@@ -473,13 +473,38 @@ body.fasto-reader-mode .fasto-reader-mode-trigger svg {
 	fill: #ff7c34;
 }
 
+@media (min-width: 1024px) {
+	ul.nav-menu .fasto-child-mobile-only {
+		display: none;
+	}
+}
+
 @media (max-width: 1024px) {
 	.social-and-search .fasto-child-desktop-only {
 		display: none;
 	}
-}
-@media (min-width: 1024px) {
-	ul.nav-menu .fasto-child-mobile-only {
+	figure.wp-caption,
+	figure.wp-caption.alignleft,
+	figure.wp-caption.aligncenter,
+	figure.wp-caption.alignright {
+		width: 100%;
+		border: none;
+		margin: 0 auto;
+		padding: 0;
+	}
+	figure.wp-caption img,
+	figure.wp-caption.alignleft img,
+	figure.wp-caption.aligncenter img,
+	figure.wp-caption.alignright img {
+		max-width: 400px;
+	}
+	.related-articles article {
+		margin-bottom: 30px;
+	}
+	.related-articles .post-title {
+		padding-bottom: 0;
+	}
+	.related-articles .post-title::after {
 		display: none;
 	}
 }
