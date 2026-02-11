@@ -17,13 +17,13 @@ msgstr ""
 
 #: adjacent-posts.php:11
 msgid "Previous &amp; Next posts"
-msgstr "Vorige &amp; folgende Beitr&auml;ge"
+msgstr "Vorige & folgende Beiträge"
 
 msgid "About author"
 msgstr "Autor:innen-Info"
 
 msgid "You might also like"
-msgstr "Verwandte Beitr&auml;ge, die dir gefallen k&ouml;nnten"
+msgstr "Verwandte Beiträge, die dir gefallen könnten"
 
 msgid "Search"
 msgstr "Suche"
