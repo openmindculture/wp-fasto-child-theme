@@ -1,5 +1,11 @@
 # Changelog
 
+## 2.3.4-plus-non-free: improve layout and internationalization (2026-02-11)
+
+* disambiguate mobile related posts layout
+* localize generic captions
+* German translations
+
 ## 2.3.2-plus-non-free: improve visual readability and accessibility (2026-01-06)
 
 * native reader mode with less freaky headline font
