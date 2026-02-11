@@ -9,19 +9,34 @@ msgid ""
 "Content-type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Project-Id-Version: fasto-child\n"
-"POT-Creation-Date: 2026-02-11 19:22+0200\n"
-"PO-Revision-Date: 2025-10-30 19:29+0200\n"
+"POT-Creation-Date: 2026-02-11 19:29+0200\n"
+"PO-Revision-Date: 2026-02-11 19:32+0200\n"
 "Last-Translator: @openmindculture\n"
 "MIME-Version: 1.0\n"
 msgstr ""
 
-#: front-page.php:3
-msgid ""
-"KleiderOrdnung Berlin: nachhaltige Modeberatung von Tina Steinke"
-msgstr ""
-"Kleiderordnung Berlin: nachhaltige Modeberatung von Tina Steinke"
+#: adjacent-posts.php:11
+msgid "Previous &amp; Next posts"
+msgstr "Vorige &amp; folgende Beitr&auml;ge"
 
-#: header.php:19
-#: inc/structure/header.php:10
-msgid "Skip to content"
-msgstr "Zum Inhalt"
+msgid "About author"
+msgstr "Autor:innen-Info"
+
+msgid "You might also like"
+msgstr "Verwandte Beitr&auml;ge, die dir gefallen k&ouml;nnten"
+
+msgid "Search"
+msgstr "Suche"
+
+msgid "Submit search"
+msgstr "Suche starten"
+
+msgid "Type your search..."
+msgstr "Suchbegriff eintragen..."
+
+msgid "Reader mode"
+msgstr "Leser-Modus"
+
+msgid "Home"
+msgstr "Blog"
+

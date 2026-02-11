@@ -105,6 +105,15 @@ cd /var/www/html/
 
 Create or copy relevant content e.g.footer widgets, more articles etc.
 
+### Localization
+
+Add missing translations in `themes/fasto-child/languages` *.po files, then use `msgfmt`, `wp`-cli, Poedit or another suitable tool to generate an updated `.mo` file.
+
+- `msgfmt -o themes/fasto-child/languages/de_DE.mo themes/fasto-child/languages/de_DE.po
+`
+
+Fasto text defaults to English. Essential German translations have been added to the child theme in release 2.3.4 in 2026.
+
 ### Child Theme Development Resources
 
 [developer.wordpress.org/themes/advanced-topics/child-themes/](https://developer.wordpress.org/themes/advanced-topics/child-themes/)
