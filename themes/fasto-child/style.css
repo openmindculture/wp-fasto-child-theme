@@ -488,7 +488,7 @@ body.fasto-reader-mode .fasto-reader-mode-trigger svg {
 	figure.wp-caption.alignleft,
 	figure.wp-caption.aligncenter,
 	figure.wp-caption.alignright {
-		width: 100%;
+		width: 100% !important;
 		border: none;
 		margin: 0 auto;
 		padding: 0;
