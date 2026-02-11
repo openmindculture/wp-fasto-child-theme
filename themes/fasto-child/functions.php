@@ -13,6 +13,11 @@
 
     add_action( 'wp_enqueue_scripts', 'child_theme_scripts' );
 
+	function fasto_child_localization_setup() {
+		load_child_theme_textdomain('fasto-child', get_stylesheet_directory() . '/languages');
+	}
+	add_action('after_setup_theme', 'fasto_child_localization_setup');
+
     function modified_fasto_developer_credit(){
         $url = 'https://wowlayers.com/';
         echo '<div class="copyright-fasto">'.esc_html__( 'WordPress theme based on fasto by ','fasto' ).'<a href="'. $url .'" target="_blank" rel="nofollow">'.esc_html__( 'WOWLayers.com','fasto' ).'</a></div>';

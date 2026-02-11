@@ -1,0 +1,27 @@
+# @package Fasto
+# @author openmindculture
+
+msgid ""
+"Language-Source: en-US\n"
+"Language-Target: de-DE\n"
+"Site-Reference: https://www.open-mind-culture.org\n"
+"Source-Reference: strings-translations\n"
+"Content-type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Project-Id-Version: fasto-child\n"
+"POT-Creation-Date: 2026-02-11 19:22+0200\n"
+"PO-Revision-Date: 2025-10-30 19:29+0200\n"
+"Last-Translator: @openmindculture\n"
+"MIME-Version: 1.0\n"
+msgstr ""
+
+#: front-page.php:3
+msgid ""
+"KleiderOrdnung Berlin: nachhaltige Modeberatung von Tina Steinke"
+msgstr ""
+"Kleiderordnung Berlin: nachhaltige Modeberatung von Tina Steinke"
+
+#: header.php:19
+#: inc/structure/header.php:10
+msgid "Skip to content"
+msgstr "Zum Inhalt"
