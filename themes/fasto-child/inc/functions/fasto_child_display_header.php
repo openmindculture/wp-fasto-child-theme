@@ -15,7 +15,11 @@ function fasto_child_display_header(){ ?>
 		<div class="logo">
 			<?php if ( function_exists( 'the_custom_logo' ) ) { the_custom_logo(); } ?>
 			<!-- BEGIN patch prevent multiple H1 headings -->
+			<?php if ( is_home() ) : ?>
+				<h1 class="site-title  fasto-child"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
+			<?php else : ?>
 			<div class="site-title fasto-child"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></div>
+			<?php endif; ?>
 			<!-- END patch prevent multiple H1 headings -->
 			<p class="site-description"><?php bloginfo( 'description' ); ?></p>
 		</div>
