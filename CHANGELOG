@@ -1,5 +1,10 @@
 # Changelog
 
+## 2.3.8-plus-non-free: improve semantics for SEO (2026-03-27)
+
+* ensure exactly one H1 heading on archive pages
+* content improvement, fixes and plugin settings beyond this theme
+
 ## 2.3.6-plus-non-free: improve layout and internationalization (2026-02-11)
 
 * disambiguate mobile related posts layout
