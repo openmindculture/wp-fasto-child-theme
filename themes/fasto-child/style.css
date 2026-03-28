@@ -123,7 +123,7 @@ footer .widget p a:visited {
 
 .single .other-posts .p-name {
 	display: inline-block;
-	max-width: 66%;
+	max-width: 88%;
 }
 
 .alignright,
@@ -412,15 +412,22 @@ ul.social-share {
 }
 
 @media (max-width: 1300px) {
-	.omc-flex-gallery img,
-	.omc-flex-gallery-2-2 img {
+	.omc-flex-gallery img{
+		object-fit: cover;
+	}
+	.omc-flex-gallery:not(.has-images-h400) img{
 		height: auto !important;
+		max-height: 300px;
 	}
 }
 @media (max-width: 768px) {
 	.omc-flex-gallery-3-3-24 > *:not([style]),
 	.omc-flex-gallery > * {
 		flex-basis: 100% !important;
+	}
+	.omc-flex-gallery img,
+	.omc-flex-gallery:not(.has-images-h400) img {
+		max-height: unset !important;
 	}
 }
 

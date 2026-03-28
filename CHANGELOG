@@ -1,8 +1,11 @@
 # Changelog
 
-## 2.3.8-plus-non-free: improve semantics for SEO (2026-03-27)
+## 2.4.0-plus-non-free: improve semantics for SEO (2026-03-28)
 
 * ensure exactly one H1 heading on archive pages
+* use alternative text, not title, from media library for cover/preview images
+* harmonize typography and image size of previous, next, related post recommendations
+* disable theme-based lazyload to prevent optimization conflicts and broken placeholders
 * content improvement, fixes and plugin settings beyond this theme
 
 ## 2.3.6-plus-non-free: improve layout and internationalization (2026-02-11)
