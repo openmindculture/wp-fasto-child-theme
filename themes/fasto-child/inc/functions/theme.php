@@ -201,7 +201,9 @@ function fasto_post_thumb( $is_loop = true,  $is_single = false , $is_widget = f
 	if ( $post_format  ==  false ) {
 		if ( has_post_thumbnail() ) {
 			$image = get_the_post_thumbnail_url( get_the_ID() , $size );
-			$alt_title = get_post( get_post_thumbnail_id() )->post_excerpt ? get_post( get_post_thumbnail_id() )->post_excerpt : get_post( get_post_thumbnail_id() )->post_title;
+			$thumbnail_id = get_post_thumbnail_id();
+			$alt_text     = get_post_meta( $thumbnail_id, '_wp_attachment_image_alt', true );
+			$alt_title    = $alt_text ? $alt_text : get_post( $thumbnail_id )->post_title;
 	?>
 
 		<div class="post-thumb">
@@ -216,11 +218,7 @@ function fasto_post_thumb( $is_loop = true,  $is_single = false , $is_widget = f
 			</div>
 			<?php } ?>
 			<?php if ( $echo_link ) { ?><a href="<?php echo esc_url( get_the_permalink() ) ?>"><?php } ?>
-			<?php if ( fasto_mod( 'fasto_lazy_load' )  == '1' ) { ?>
-				<img class="cover-image lazyload" src="<?php echo esc_url( FASTO_URI.'/images/placeholder-'.esc_attr( $grid ).'.png' ); ?>" alt="<?php echo esc_attr( $alt_title ); ?>" data-src="<?php echo esc_url( $image ); ?>">
-			<?php } else { ?>
-				<img class="cover-image visible" src="<?php echo esc_url( $image ) ?>" alt="<?php echo esc_attr( $alt_title ); ?>">
-			<?php } ?>
+			<img class="cover-image visible" src="<?php echo esc_url( $image ) ?>" alt="<?php echo esc_attr( $alt_title ); ?>">
 			<?php if ( $echo_link ) { ?></a><?php } ?>
 		</div>
 
