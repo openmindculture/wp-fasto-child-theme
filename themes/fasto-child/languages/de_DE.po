@@ -10,14 +10,22 @@ msgid ""
 "Content-Transfer-Encoding: 8bit\n"
 "Project-Id-Version: fasto-child\n"
 "POT-Creation-Date: 2026-02-11 19:29+0200\n"
-"PO-Revision-Date: 2026-02-11 19:32+0200\n"
+"PO-Revision-Date: 2026-03-28 12:32+0100\n"
 "Last-Translator: @openmindculture\n"
 "MIME-Version: 1.0\n"
 msgstr ""
 
-#: adjacent-posts.php:11
+#: adjacent-posts.php
 msgid "Previous &amp; Next posts"
-msgstr "Vorige & folgende Beiträge"
+msgstr "Ältere und neuere Blog-Beiträge"
+
+#: adjacent-posts.php
+msgid "Older and newer blog posts"
+msgstr "Ältere und neuere Blog-Beiträge"
+
+#: adjacent-posts.php: fallback alt text
+msgid "post image"
+msgstr "Beitragsbild"
 
 msgid "About author"
 msgstr "Autor:innen-Info"

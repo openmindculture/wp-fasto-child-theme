@@ -203,7 +203,7 @@ function fasto_post_thumb( $is_loop = true,  $is_single = false , $is_widget = f
 			$image = get_the_post_thumbnail_url( get_the_ID() , $size );
 			$thumbnail_id = get_post_thumbnail_id();
 			$alt_text     = get_post_meta( $thumbnail_id, '_wp_attachment_image_alt', true );
-			$alt_title    = $alt_text ? $alt_text : get_post( $thumbnail_id )->post_title;
+			$alt_title    = $alt_text ?: get_post( $thumbnail_id )->post_title;
 	?>
 
 		<div class="post-thumb">

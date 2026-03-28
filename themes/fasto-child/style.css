@@ -5,7 +5,7 @@
  Author:       Ingo Steinke
  Author URI:   https://www.ingo-steinke.com/
  Template:     fasto
- Version:      2.3.8
+ Version:      2.4.0
  Tested up to: 6.9
  Requires PHP: 7.0
  License:      GNU General Public License v2 or later (except for optional non-free web fonts)
@@ -113,6 +113,17 @@ footer .widget p a:visited {
 .post-thumb .cover-image {
     object-fit: cover;
     aspect-ratio: 16/9;
+}
+
+.single .other-posts-thumbnail {
+	aspect-ratio: 16 / 9;
+	max-width: min(333px, 100%);
+	object-fit: cover;
+}
+
+.single .other-posts .p-name {
+	display: inline-block;
+	max-width: 66%;
 }
 
 .alignright,
