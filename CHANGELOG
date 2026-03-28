@@ -1,6 +1,6 @@
 # Changelog
 
-## 2.4.0-plus-non-free: improve semantics for SEO (2026-03-28)
+## 2.4.0-plus-non-free: improve style and semantics (2026-03-28)
 
 * ensure exactly one H1 heading on archive pages
 * use alternative text, not title, from media library for cover/preview images
