@@ -1,6 +1,6 @@
 # wp-fasto-child-theme
 
-minor theme modifications for using [fasto](https://wordpress.org/support/theme/fasto/) on [open-mind-culture.org](https://www.open-mind-culture.org/)
+Theme modifications for using [fasto](https://wordpress.org/support/theme/fasto/) on [open-mind-culture.org](https://www.open-mind-culture.org/) conceived, coded and maintained by [Ingo Steinke, web developer](https://www.ingo-steinke.de/). Free and open source except for exclusively licensed web fonts (see below).
 
 ![screenshot](themes/fasto-child/screenshot.png)
 
@@ -19,7 +19,7 @@ The optional web fonts, [Healthy Freak](https://www.myfonts.com/fonts/vozzy/heal
 
 While wp-fasto-child-theme is distributed under the GPL license,the optional MyFontsWebfontsKit is **not** covered by the GPL and may **not** be used on other websites without a valid license.
 
-This is not a free them because of the included licensed fonts! If you want to use it, please fork your own version and replace them!
+If you want to use this theme modification, please fork your own version, replace the fonts, and give credit both to the original theme authors, WOWLayers, and openmindculture (Ingo Steinke).
 
 ## Installation 
 
@@ -30,6 +30,17 @@ This is not a free them because of the included licensed fonts! If you want to u
 - activate theme
 
 ## Development
+
+### Localization
+
+Add missing translations in `themes/fasto-child/languages` *.po files, then use `msgfmt`, `wp`-cli, Poedit or another suitable tool to generate an updated `.mo` file.
+
+- `msgfmt -o themes/fasto-child/languages/de_DE.mo themes/fasto-child/languages/de_DE.po
+`
+
+Fasto text defaults to English. Essential German translations have been added to the child theme in release 2.3.4 in 2026.
+
+### Local host Docker setup (optional)
 
 ```
 docker-compose up
@@ -104,15 +115,6 @@ cd /var/www/html/
 ### Copy Content
 
 Create or copy relevant content e.g.footer widgets, more articles etc.
-
-### Localization
-
-Add missing translations in `themes/fasto-child/languages` *.po files, then use `msgfmt`, `wp`-cli, Poedit or another suitable tool to generate an updated `.mo` file.
-
-- `msgfmt -o themes/fasto-child/languages/de_DE.mo themes/fasto-child/languages/de_DE.po
-`
-
-Fasto text defaults to English. Essential German translations have been added to the child theme in release 2.3.4 in 2026.
 
 ### Child Theme Development Resources
 
