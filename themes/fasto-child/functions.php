@@ -20,7 +20,9 @@
 
     function modified_fasto_developer_credit(){
         $url = 'https://wowlayers.com/';
-        echo '<div class="copyright-fasto">'.esc_html__( 'WordPress theme based on fasto by ','fasto' ).'<a href="'. $url .'" target="_blank" rel="nofollow">'.esc_html__( 'WOWLayers.com','fasto' ).'</a></div>';
+        echo '<div class="copyright-fasto">'.esc_html__( 'WordPress theme based on fasto by ','fasto' ).'<a href="'. $url .'" target="_blank" rel="nofollow">'.esc_html__( 'WOWLayers.com','fasto' ).'</a>';
+		echo ' modified and maintained by <a href="https://www.ingo-steinke.de/" target="_blank">Ingo Steinke</a>';
+		echo '</div>';
     }
 
     function child_remove_parent_function() {
