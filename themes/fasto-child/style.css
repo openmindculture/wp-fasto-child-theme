@@ -412,13 +412,15 @@ ul.social-share {
 }
 
 @media (max-width: 1300px) {
+	.omc-flex-gallery img,
+	.omc-flex-gallery-2-2 img {
+		height: auto !important;
+	}
+}
+@media (max-width: 768px) {
 	.omc-flex-gallery-3-3-24 > *:not([style]),
 	.omc-flex-gallery > * {
 		flex-basis: 100% !important;
-	}
-	.omc-flex-gallery img,
-	.omc-flex-gallery-2-2 img {
-		height: auto;
 	}
 }
 
