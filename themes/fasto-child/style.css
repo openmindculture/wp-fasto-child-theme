@@ -357,6 +357,7 @@ ul.social-share {
 	display: none;
 }
 
+.site-grid-inner .articles .post.tag-style-dateless .date-published,
 .site-grid-inner .articles .post.sticky .date-published {
 	display: none;
 }
