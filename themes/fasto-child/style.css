@@ -178,6 +178,22 @@ header#theme-header .site-title a, h1 a {
 	color: #0e1638;
 }
 
+/* fix color contrast accessibility */
+a:hover, .color-2, .widget .color-2 {
+	color: #577b2e !important;
+}
+
+.post-category .category-link:hover,
+.post-category .category-link:focus {
+	background-color: #577b2e !important;
+	color: #fff !important;
+}
+
+.pagination a:hover {
+	background-color: #ff7c34;
+	color: #fff !important;
+}
+
 .post-category .category-link {
 	background-color: #563a6a;
 	height: 20px;
@@ -205,17 +221,6 @@ header #searchform.active{
 
 .fasto_child_category_description > p:first-child {
 	margin-top: 0;
-}
-
-/* fix color contrast accessibility */
-a:hover, .color-2, .widget .color-2 {
-	color: #577b2e !important;
-}
-
-.post-category .category-link:hover,
-.post-category .category-link:focus {
-	background-color: #577b2e !important;
-	color: #fff !important;
 }
 
 #search-form-holder { /* workaround cross-browser inconsistencies */
