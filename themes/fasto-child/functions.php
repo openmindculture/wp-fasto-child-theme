@@ -94,3 +94,11 @@ function fasto_child_remove_parent_html5() {
 	) );
 }
 add_action( 'after_setup_theme', 'fasto_child_remove_parent_html5', 11 );
+
+if ( is_admin() ) {
+	add_action( 'admin_init', function () {
+		if ( is_admin() ) {
+			add_editor_style( 'editor-style.css' );
+		}
+	} );
+}

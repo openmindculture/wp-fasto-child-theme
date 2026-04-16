@@ -1,5 +1,11 @@
 # Changelog
 
+## 2.4.3-plus-non-free: improve editor preview (2026-04-16)
+
+* apply gallery layout in the editor preview
+* indicate gallery grid flex container with a subtle border
+* indicate imageless gallery cells with a dotted border
+
 ## 2.4.2-plus-non-free: add style options (2026-04-13)
 
 * add functional tag "style-dateless" to hide date on post teasers

@@ -1,0 +1,53 @@
+/**
+ * Editor Styles for Classic Editor (TinyMCE)
+ *
+ * @package fastochild
+ * @author openmindculture
+ */
+
+body#tinymce.wp-editor .omc-flex-gallery {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	flex-gap: 1rem;
+	gap: 1rem;
+}
+body#tinymce.wp-editor .omc-flex-gallery.flex-nowrap {
+	flex-wrap: nowrap;
+}
+body#tinymce.wp-editor .omc-flex-gallery > * {
+	text-align: center;
+}
+
+body#tinymce.wp-editor .omc-flex-gallery img {
+	height: 300px;
+	width: auto;
+	object-fit: cover;
+}
+body#tinymce.wp-editor .omc-flex-gallery-3-3 img {
+	height: 300px;
+}
+body#tinymce.wp-editor .omc-flex-gallery-3-3.has-images-h400 img {
+	height: 400px;
+}
+
+body#tinymce.wp-editor .omc-flex-gallery-2-2 img {
+	height: 400px;
+}
+
+body#tinymce.wp-editor .omc-flex-gallery-3-3-24 > * {
+	flex-basis: 29%;
+}
+
+body#tinymce.wp-editor .omc-flex-gallery-3-3.flex-nowrap.has-images-h400 img {
+	width: auto;
+	height: auto
+}
+
+body#tinymce.wp-editor .omc-flex-gallery {
+	border: 1px dashed silver;
+}
+
+body#tinymce.wp-editor .omc-flex-gallery > *:not(:has(img)) {
+	border: dotted silver;
+}
