@@ -1,6 +1,10 @@
 # Changelog
 
-## 2.4.3-plus-non-free: improve editor preview (2026-04-16)
+## 2.4.4-plus-non-free: improve gallery layout (2026-04-18)
+
+* prevent unintentional image margins within gallery cells
+
+## 2.4.3-plus-non-free: improve editor preview (2026-04-17)
 
 * apply gallery layout in the editor preview
 * indicate gallery grid flex container with a subtle border
