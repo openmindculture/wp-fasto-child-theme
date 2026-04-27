@@ -34,13 +34,12 @@ $fasto_wordpress_default_date_format = get_option( 'date_format' ) ;
 					<?php
 						$fasto_child_author_nickname = esc_html( get_the_author_meta( 'nickname' ));
 						$fasto_child_author_name = esc_html( get_the_author_meta( 'display_name' ));
-						$author_id = get_the_author_meta('ID');
 						if (empty($fasto_child_author_name)) {
 							$fasto_child_author_name = $fasto_child_author_nickname;
 						}
 						if ( $fasto_child_author_nickname == 'openmindculture' || $fasto_child_author_nickname == 'Ingo Steinke' ) {
 							$fasto_child_author_url = get_author_posts_url( get_the_author_meta( 'ID' ) );
-							?><a href="<?= $fasto_child_author_url ?>#<?= $author_id ?>" class="body-color author-url fn n"><?= $fasto_child_author_name ?></a><?php
+							?><a href="<?= $fasto_child_author_url ?>" class="body-color author-url fn n"><?= $fasto_child_author_name ?></a><?php
 						} else {
 							?><span class="body-color author-url fn n"><?= $fasto_child_author_name ?></span><?php
 						}
