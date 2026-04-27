@@ -6,20 +6,30 @@ Theme modifications for using [fasto](https://wordpress.org/support/theme/fasto/
 
 ## Modifications
 
-see [CHANGELOG](./CHANGELOG)
-
 Some modifications, like more accurate related post suggestions, might slow down the theme unless pages are cached by using a caching plugin like W3TC or a reverse proxy server.
+
+### post drafts preview in context
+
+Linked from the post drafts list view page, https://www.open-mind-culture.org/?s=&previewdrafts=1&lang=&ids= allows logged-in admins to preview all drafts having a featured image in the context of search results, by default mixing all languages but only showing one post per translation group.
+
+- `s` search query
+- `lang` language e.g. `de` or `en` or empty for all languages
+- `ids` optional list of ids like `3210,3211,2345` to restrict and order by
 
 ### optional web fonts (non-free)
 
 - [x] optional MyFontsWebfontsKit **NOT free to use**!
-- [ ] (TODO fix `wp_dequeue_style` and remove action unloading obsolete web fonts from google; workaround: deactivate enqueuing in parent theme)
+- [ ] (TODO fix `wp_dequeue_style` and remove action unloading obsolete web fonts from Google; workaround: deactivate enqueuing in parent theme)
 
 The optional web fonts, [Healthy Freak](https://www.myfonts.com/fonts/vozzy/healthy-freak/) by [Oleg Voznyy](https://www.myfonts.com/foundry/vozzy/), and  [Liebe Ruth](https://liebefonts.com/fonts/lieberuth) by [Ulrike Rausch](https://liebefonts.com/about) have been purchased by Ingo Steinke via [MyFonts.com](https://www.myfonts.com/) (Order # M12889860, Webfont Build ID 4424710).
 
 While wp-fasto-child-theme is distributed under the GPL license,the optional MyFontsWebfontsKit is **not** covered by the GPL and may **not** be used on other websites without a valid license.
 
 If you want to use this theme modification, please fork your own version, replace the fonts, and give credit both to the original theme authors, WOWLayers, and openmindculture (Ingo Steinke).
+
+### Author pages, related posts and other semantic and visual changes
+
+see the [CHANGELOG](./CHANGELOG).
 
 ## Installation 
 
