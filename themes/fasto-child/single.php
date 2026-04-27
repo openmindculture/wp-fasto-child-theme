@@ -30,27 +30,31 @@ $fasto_wordpress_default_date_format = get_option( 'date_format' ) ;
 				<?php fasto_post_thumb( false,  true , false , false , false ); fasto_categories( $post->ID ); ?>
 				<?php fasto_cat_breadcrumb(); ?>
 				<h1 class="article-title"><?php the_title(); ?></h1>
-				<div class="author-date">
-					<span class="body-color author-url" class="color-1"><?php echo esc_html( get_the_author_meta( 'nickname' ) ); ?></span>
+				<div class="author-date author vcard">
+					<?php
+						$fasto_child_author_nickname = esc_html( get_the_author_meta( 'nickname' ));
+						$fasto_child_author_name = esc_html( get_the_author_meta( 'display_name' ));
+						$author_id = get_the_author_meta('ID');
+						if (empty($fasto_child_author_name)) {
+							$fasto_child_author_name = $fasto_child_author_nickname;
+						}
+						if ( $fasto_child_author_nickname == 'openmindculture' || $fasto_child_author_nickname == 'Ingo Steinke' ) {
+							$fasto_child_author_url = get_author_posts_url( get_the_author_meta( 'ID' ) );
+							?><a href="<?= $fasto_child_author_url ?>#<?= $author_id ?>" class="body-color author-url fn n"><?= $fasto_child_author_name ?></a><?php
+						} else {
+							?><span class="body-color author-url fn n"><?= $fasto_child_author_name ?></span><?php
+						}
+					?>
 					<div class="vertical-separator"></div>
 					<?php /* <!-- BEGIN patch: add stylable element -->  */ ?>
 					<span class="author-date-date"><?php echo esc_html( get_the_date( $fasto_wordpress_default_date_format ) );?></span>
 					<?php /* <!-- END patch: add stylable element -->   */ ?>
-					<?php /* <!-- BEGIN patch: hide comment count --> */ ?>
-					<?php /* <div class="vertical-separator"></div> */ ?>
-					<?php
-					// printf(
-					/* translators: number of comments */
-					//	esc_html( _n( '%1$s Comments ', '%1$s Comments ', get_comments_number(), 'fasto' ) ),
-					//	esc_html( number_format_i18n( get_comments_number() ) )
-					// );
-					?>
-					<?php /* <!-- END patch: hide comment count --> */ ?>
+					<?php /* <!-- Open Mind Culture patch: hide comment count --> */ ?>
 				</div>
 				<div class="separator single"></div>
 
 				<div class="post-content">
-					<?php /* <!-- pen Mind Culture patch: don't social media sharing buttons --> */ ?>
+					<?php /* <!-- Open Mind Culture patch: omit social media sharing buttons --> */ ?>
 					<div class="post-content-inner">
 						<?php the_content(); ?>
 					</div>
@@ -92,8 +96,8 @@ $fasto_wordpress_default_date_format = get_option( 'date_format' ) ;
 	</div><!-- end .fasto-row -->
 <?php } ?>
 
-	<div class="separator single big"></div>
-
+<!-- omit author box for main author to imrove readability flow -->
+<?php if ( get_the_author_meta( 'nickname' ) != 'openmindculture' ) { ?>
 	<div class="author-box"><!-- start .author-box -->
 		<div class="author">
 			<?php
@@ -105,6 +109,7 @@ $fasto_wordpress_default_date_format = get_option( 'date_format' ) ;
 		<h2><?php echo esc_html( fasto_author_info( 'nickname' ) ); ?></h2>
 		<p><?php echo esc_html( fasto_author_info( 'description' ) ); ?></p>
 	</div><!-- end .author-box -->
+<?php } /* endif which author */ ?>
 
 	<aside><div class="related-articles"><!-- start .related-articles -->
 		<h2 class="title"><?php echo esc_html__( 'You might also like','fasto' );  ?></h2>

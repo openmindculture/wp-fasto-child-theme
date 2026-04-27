@@ -5,7 +5,7 @@
  Author:       Ingo Steinke
  Author URI:   https://www.ingo-steinke.com/
  Template:     fasto
- Version:      2.4.4
+ Version:      2.4.5
  Tested up to: 6.9
  Requires PHP: 7.0
  License:      GNU General Public License v2 or later (except for optional non-free web fonts)
@@ -303,6 +303,11 @@ header #searchform.active{
 		line-height: 1.25;
 		margin: 0;
 	}
+	author.author-date,
+	author.author-date a {
+		text-transform: none;
+		font-size: 14px;
+	}
 	h1 + .author-date, .author-date-date {
 		padding-bottom: 0;
 		white-space: nowrap;
@@ -441,6 +446,21 @@ ul.social-share {
 .omc-flex-gallery-3-3.flex-nowrap.has-images-h400 img {
 	width: auto;
 	height: auto
+}
+
+@media (min-width: 768px) {
+	body.author .fasto-child-mobile-only {
+		display: none;
+	}
+}
+
+body.author .author-box {
+	min-height: 200px;
+}
+
+body.author .author.vcard {
+	width: 100%;
+	top: 2rem;
 }
 
 body #fasto-reader-mode-target:target h1,

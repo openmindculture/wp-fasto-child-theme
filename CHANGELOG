@@ -1,5 +1,10 @@
 # Changelog
 
+## 2.4.5-plus-non-free: layout, draft preview (2026-04-27)
+
+* prevent author info distraction from further reading suggestions #19
+* preview draft posts in list context on front page #18
+
 ## 2.4.4-plus-non-free: improve gallery layout (2026-04-18)
 
 * prevent unintentional image margins within gallery cells

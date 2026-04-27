@@ -55,7 +55,11 @@ if (!is_admin() || $pagenow != 'post.php') {
 /* SEO: disable author page archive if most content is by the same author */
 function disable_author_archives() {
 	if (is_author()) {
-		wp_redirect(home_url(), 301);
+		$author = get_queried_object();
+		if ( isset($author->user_nicename) && $author->user_nicename === 'ingo-steinke' ) {
+			return;
+		}
+		wp_redirect( home_url(), 301 );
 		exit;
 	}
 }
