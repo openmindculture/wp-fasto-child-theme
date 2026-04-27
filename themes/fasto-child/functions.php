@@ -105,4 +105,25 @@ if ( is_admin() ) {
 			add_editor_style( 'editor-style.css' );
 		}
 	} );
+
+	add_action('manage_posts_extra_tablenav', function ($which) {
+
+		if ($which !== 'top') {
+			return;
+		}
+
+		$screen = get_current_screen();
+
+		if (!$screen || $screen->post_type !== 'post') {
+			return;
+		}
+
+		if (isset($_GET['post_status']) && $_GET['post_status'] === 'draft') {
+			echo '<div>
+                <a class="button button-primary" href="https://www.open-mind-culture.org/?s=&previewdrafts=1&lang=&ids=" target="_blank">
+                    Preview drafts in list context
+                </a>
+              </div>';
+		}
+	});
 }
