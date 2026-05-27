@@ -31,6 +31,8 @@ If you want to use this theme modification, please fork your own version, replac
 
 see the [CHANGELOG](./CHANGELOG).
 
+Reminder: [Don't use sticky posts!](https://github.com/openmindculture/wp-fasto-child-theme/issues/21)
+
 ## Installation 
 
 - create or [download a zip archive](https://github.com/openmindculture/wp-fasto-child-theme/releases/) of the directory `fasto-child`
