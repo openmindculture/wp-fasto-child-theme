@@ -42,9 +42,20 @@ msgstr "Suche starten"
 msgid "Type your search..."
 msgstr "Suchbegriff eintragen..."
 
+msgid "Search Result"
+msgstr "Suchergebnis"
+
+msgid "No articles matched your search for"
+msgstr "Keine Suchergebnisse für"
+
+msgid "Try using fewer or more general keywords, or explore our latest topics."
+msgstr "Versuche es mit weniger oder allgemeineren Suchbegriffen, oder entdecke unsere neusten Themen."
+
+msgid "Why not browse our latest articles instead?"
+msgstr "Stöbere doch stattdessen in unseren neusten Artikeln."
+
 msgid "Reader mode"
 msgstr "Leser-Modus"
 
 msgid "Home"
 msgstr "Blog"
-
