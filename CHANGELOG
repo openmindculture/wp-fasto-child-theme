@@ -1,6 +1,10 @@
 # Changelog
 
-## 2.4.5-plus-non-free: reading recommendations on not found (2026-06-12)
+## 2.4.8-plus-non-free: fix display edge case bugs
+
+* prevent image overflow (reported on Android 16: OS text size affecting mobile Firefox)
+
+## 2.4.6-plus-non-free: reading recommendations on not found (2026-06-12)
 
 * reading recommendations on not found pages
 

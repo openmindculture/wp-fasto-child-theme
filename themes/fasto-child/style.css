@@ -5,7 +5,7 @@
  Author:       Ingo Steinke
  Author URI:   https://www.ingo-steinke.com/
  Template:     fasto
- Version:      2.4.6
+ Version:      2.4.8
  Tested up to: 7.0
  Requires PHP: 8.0
  License:      GNU General Public License v2 or later (except for optional non-free web fonts)
@@ -537,15 +537,21 @@ body.fasto-reader-mode .fasto-reader-mode-trigger svg {
 	figure.wp-caption.aligncenter,
 	figure.wp-caption.alignright {
 		width: 100% !important;
+		width: min(100%, 99vw) !important;
+		max-width: 99vw;
 		border: none;
 		margin: 0 auto;
 		padding: 0;
 	}
+	.post-content img,
+	figure img,
 	figure.wp-caption img,
 	figure.wp-caption.alignleft img,
 	figure.wp-caption.aligncenter img,
 	figure.wp-caption.alignright img {
-		max-width: 400px;
+		max-width: 100% !important;
+		max-width: min(100%, 99vw, 400px) !important;
+		height: auto !important;
 	}
 	.related-articles article {
 		margin-bottom: 30px;
